@@ -114,9 +114,9 @@ export default function Celebrate({ closeDan, dan = 'Super long memory egg' }) {
       // elRef refers to the <span> rendered below
       typed.current = new Typed(el.current, {
         strings: [
-          `<p>Great!!! </p>
-<p>Found an Easter egg: <strong>${dan}</strong>, take a screenshot to save this interface, collect <strong>two Easter eggs</strong>, and then you can find the groom 🤵🏻 to exchange for a small gift carefully prepared by the couple! </p>
-<p>Free and free shipping, only 10 pieces available, while stocks last. </p>`
+          `<p>Quá tuyệt dzờiii!!! </p>
+          <p>Bạn đã tìm thấy một "quả trứng phục sinh": <strong>${dan}</strong>, bạn hãy chụp ảnh màn hình để lưu lại nha, bây giờ hãy tìm tiếp để đủ <strong>hai "quả trứng phục sinh"</strong>, sau đó hãy gửi hình chụp màn hình cho chú rể 🤵🏻 để đổi lấy một món quà nhỏ đã được tụi mình chuẩn bị nha </p>
+          <p>Dành cho 10 người may mắn nhaaa. </p>`
         ],
         typeSpeed: 30,
         showCursor: false
@@ -135,9 +135,9 @@ export default function Celebrate({ closeDan, dan = 'Super long memory egg' }) {
     <StyledPopup>
       <Confetti gravity={0.2} numberOfPieces={300} />
       <div className="tip">
-        <h3 className="title">Congratulations🎉🎉🎉</h3>
+        <h3 className="title">🎉🎉🎉Xin chúc mừngggg🎉🎉🎉</h3>
         <div className="content" ref={el}></div>
-        <div className="ps">* The final right of interpretation of the event belongs to the groom</div>
+        <div className="ps">* Giữ bí mật nha bạn iuuuu</div>
         <div className="close" onClick={closeDan}>
           <MdClose color="#fff" />
         </div>

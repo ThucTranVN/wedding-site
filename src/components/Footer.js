@@ -25,7 +25,7 @@ const Wrapper = styled.footer`
 const Footer = (props) => (
   <Wrapper style={props.timeout ? { display: 'none' } : {}}>
     <p className="copyright">
-      created by{' '}
+      developed by{' '}
       <a href="https://github.com/ThucTranVN" target="_blank">
         Thuc Tran
       </a>{' '}

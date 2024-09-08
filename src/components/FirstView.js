@@ -129,10 +129,10 @@ export default function FirstView() {
     // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, {
       strings: [
-        'We <strong>met</strong>',
-        'We <strong>got</strong> each other',
-        'We <strong>fell in love</strong>',
-        'We <strong>got</strong> married!'
+        'Tụi mình <strong>gặp</strong> nhau',
+        'Tụi mình <strong>yêu</strong> nhau',
+        'Tụi mình <strong>bên</strong> nhau',
+        'Tụi mình sắp <strong>cưới</strong> nhau!'
       ],
       typeSpeed: 200,
       backSpeed: 50,
@@ -163,14 +163,13 @@ export default function FirstView() {
       )}
       <div className="inner_wrapper">
         <div className="box">
-          {/* <div className="married">我们结婚啦</div> */}
           <div className="title">
             💕<span ref={el}></span>💕
           </div>
           <div className="date">
             <div className="countdown">
               <span className="num day">
-                {value.day} day<br/>{value.hour} hour<br/>{value.minute} minute<br/>{value.second} second
+                {value.day} ngày<br/>{value.hour} giờ<br/>{value.minute} phút<br/>{value.second} giây
               </span>
             </div>
             <div className="time">10.11.2024</div>
@@ -178,7 +177,6 @@ export default function FirstView() {
         </div>
       </div>
       <HiChevronDoubleDown className="down" />
-      {/* <img src={WelcomeImage} /> */}
     </StyledWrapper>
   )
 }

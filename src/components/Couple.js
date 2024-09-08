@@ -60,12 +60,12 @@ const StyledWrapper = styled.section`
 `
 const tips = {
   h: {
-    m: 'right',
-    w: 'left'
+    m: 'trái',
+    w: 'phải'
   },
   v: {
-    m: 'under',
-    w: 'above'
+    m: 'trên',
+    w: 'dưới'
   }
 }
 export default function Couple({ popupDan }) {
@@ -82,7 +82,7 @@ export default function Couple({ popupDan }) {
   }
   return (
     <StyledWrapper>
-      <Title title="Bride · Groom" />
+      <Title title="Cô dâu · Chú rể" />
       <div className="cp">
       <div className="profile">
           <div className="pic girl" onDoubleClick={handleDC}>
@@ -90,7 +90,7 @@ export default function Couple({ popupDan }) {
           </div>
           <div className="name">Chu Thảo👰🏻</div>
           <div className="intro">
-            There are three things I cannot live without: water, air, and that man
+          Có ba thứ tui không thể sống thiếu: nước, không khí và người đàn ông ở bên {tips[pos].w} đó
           </div>
         </div>
         <div className="profile">
@@ -99,7 +99,7 @@ export default function Couple({ popupDan }) {
           </div>
           <div className="name">Kiến Thức🤵🏻</div>
           <div className="intro">
-          There are three things I cannot live without: water, air, and that woman
+          Có ba thứ tui không thể sống thiếu: nước, không khí và người phụ nữ ở bên {tips[pos].m} đó
           </div>
         </div>
 

@@ -58,12 +58,12 @@ const StyledWrapper = styled.section`
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         margin: 0.2rem 0;
         .item {
           font-size: 0.22rem;
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           margin: 0.1rem 0;
 
           .label {
@@ -109,23 +109,25 @@ const StyledWrapper = styled.section`
 export default function Wedding() {
   return (
     <StyledWrapper>
-      <Title title="Location" />
+      <Title title="Địa điểm tổ chức" />
       <div className="wrapper">
         <div className="box">
-          <h3 className="title">Wedding party</h3>
+          <h3 className="title">Lễ cưới</h3>
           <ul className="items">
             <li className="item">
-              <span className="label">Time</span>
+              <span className="label">Thời gian</span>
               <span className="txt">10.11.2024 11:00</span>
             </li>
             <li className="item">
-              <span className="label">Address</span>
+              <span className="label">Địa điểm</span>
+              <span lassName="txt">Maison De Charme</span>
+            </li>
+            <li className="item">
               <div className="txt loc">
-                <span>Maison De Charme</span>
-                <a className="map" href={'https://maps.app.goo.gl/B2PbiPWjK9LEcWxi9'} target='_blank'>
-                  <img src={MapImg} alt="map" />
-                </a>
-              </div>
+                  <a className="map" href={'https://maps.app.goo.gl/B2PbiPWjK9LEcWxi9'} target='_blank'>
+                    <img src={MapImg} alt="map" />
+                  </a>
+                </div>
             </li>
           </ul>
         </div>

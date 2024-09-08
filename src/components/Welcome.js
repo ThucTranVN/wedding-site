@@ -85,7 +85,7 @@ const StyledWrapper = styled.section`
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         padding: 0.1rem 0.3rem;
       }
     }
@@ -102,31 +102,36 @@ export default function Welcome() {
   }, [])
   return (
     <StyledWrapper>
-      <Title title="Welcome To Attend" />
+      <Title title="Chào mừng bạn đến tham dự" />
       <div className="wrapper">
         <div className="countdown">
           <div className="box">
             <span className="num day">{value.day}</span>
-            <span className="txt">day</span>
+            <span className="txt">ngày</span>
           </div>
           <div className="box">
             <span className="num hour">{value.hour}</span>
-            <span className="txt">hour</span>
+            <span className="txt">giờ</span>
           </div>
           <div className="box">
             <span className="num min">{value.minute}</span>
-            <span className="txt">minute</span>
+            <span className="txt">phút</span>
           </div>
           <div className="box">
             <span className="num second">{value.second}</span>
-            <span className="txt">second</span>
+            <span className="txt">giây</span>
           </div>
         </div>
         <div className="cele">
           <div className="flowers">
             <Confetti gravity={0.2} numberOfPieces={150} />
           </div>
-          <div className="txt">We're getting married!</div>
+
+        </div>
+      </div>
+      <div className="wrapper">
+        <div className="countdown">
+          <span className="txt">Tụi mình sắp cưới nhau rồi!</span>
         </div>
       </div>
     </StyledWrapper>

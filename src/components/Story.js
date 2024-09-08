@@ -153,9 +153,10 @@ function createMarkup(html) {
 export default function Couple() {
   return (
     <StyledWrapper>
-      <Title title="Our Story" />
+      <Title title="Câu chuyện tình yêu của tụi mình" />
       <div className="tl">
-        <ul className="items">
+      <p className="desc"> Coming soon </p>
+        {/* <ul className="items">
           {items.map(({ title, datetime, desc, picture }, idx) => (
             <li key={title} className="item">
               <div className="pic">
@@ -175,7 +176,7 @@ export default function Couple() {
               </div>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </StyledWrapper>
   )
