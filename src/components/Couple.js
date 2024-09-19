@@ -60,12 +60,12 @@ const StyledWrapper = styled.section`
 `
 const tips = {
   h: {
-    m: 'trái',
-    w: 'phải'
+    m: 'left',
+    w: 'right'
   },
   v: {
-    m: 'trên',
-    w: 'dưới'
+    m: 'above',
+    w: 'below'
   }
 }
 export default function Couple({ popupDan }) {
@@ -90,7 +90,7 @@ export default function Couple({ popupDan }) {
           </div>
           <div className="name">Chu Thảo👰🏻</div>
           <div className="intro">
-          There are three things I cannot live without: water, air, and {tips[pos].m} that man
+          There are three things I cannot live without: water, air, and that man on the {tips[pos].w}
           </div>
         </div>
         <div className="profile">
@@ -99,7 +99,7 @@ export default function Couple({ popupDan }) {
           </div>
           <div className="name">Kiến Thức🤵🏻</div>
           <div className="intro">
-          There are three things I cannot live without: water, air, and {tips[pos].w} that woman
+          There are three things I cannot live without: water, air, and that woman on the {tips[pos].m}
           </div>
         </div>
 
