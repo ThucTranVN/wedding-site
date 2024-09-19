@@ -153,7 +153,7 @@ function createMarkup(html) {
 export default function Couple() {
   return (
     <StyledWrapper>
-      <Title title="Câu chuyện tình yêu của tụi mình" />
+      <Title title="Our sweet journey" />
       <div className="tl">
       <p className="desc"> Coming soon </p>
         {/* <ul className="items">

@@ -104,8 +104,8 @@ const dailys = Array.from(Array(1).keys())
 const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   const viewCount = useRef(0)
   const title = {
-    wedding: 'Ảnh cưới của tụi mình',
-    dailys: 'Ảnh "bình thường" của tụi mình'
+    wedding: 'Our wedding photo',
+    dailys: 'Our daily photo'
   }
   const [reiniting, setReiniting] = useState(false)
   // console.log({ photos })
@@ -119,7 +119,7 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   const handleLgClose = () => {
     // console.log('lg close')
     if (viewCount.current >= 20) {
-      popupDan('Những kỷ niệm của tụi mình')
+      popupDan('Our sweet memories')
     }
   }
   const handleLgOpen = () => {
@@ -174,7 +174,7 @@ export default function Gallery({ popupDan }) {
   }
   return (
     <StyledWrapper>
-      <Title title="Kỷ niệm · Thư viện ảnh" />
+      <Title title="Memories · Gallery" />
       <div className="btns">
         <div className="group">
           <button
@@ -182,14 +182,14 @@ export default function Gallery({ popupDan }) {
             data-cate="wedding"
             onClick={handleCateClick}
           >
-            Hình cưới
+            Wedding photo
           </button>
           <button
             className={`btn ${cate == 'dailys' ? 'curr' : ''}`}
             data-cate="dailys"
             onClick={handleCateClick}
           >
-            Hình "bình thường"
+            Daily photo
           </button>
         </div>
       </div>

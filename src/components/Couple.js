@@ -82,24 +82,24 @@ export default function Couple({ popupDan }) {
   }
   return (
     <StyledWrapper>
-      <Title title="Cô dâu · Chú rể" />
+      <Title title="Bride · Groom" />
       <div className="cp">
       <div className="profile">
           <div className="pic girl" onDoubleClick={handleDC}>
-            <img src={FrameImage} alt="man" />
+            <img src={FrameImage} alt="Bride" />
           </div>
           <div className="name">Chu Thảo👰🏻</div>
           <div className="intro">
-          Có ba thứ tui không thể sống thiếu: nước, không khí và người đàn ông ở bên {tips[pos].w} đó
+          There are three things I cannot live without: water, air, and {tips[pos].m} that man
           </div>
         </div>
         <div className="profile">
           <div className="pic boy" onDoubleClick={handleDC}>
-            <img src={FrameImage} alt="man" />
+            <img src={FrameImage} alt="Groom" />
           </div>
           <div className="name">Kiến Thức🤵🏻</div>
           <div className="intro">
-          Có ba thứ tui không thể sống thiếu: nước, không khí và người phụ nữ ở bên {tips[pos].m} đó
+          There are three things I cannot live without: water, air, and {tips[pos].w} that woman
           </div>
         </div>
 

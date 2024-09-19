@@ -112,14 +112,14 @@ export default function Wedding() {
       <Title title="Địa điểm tổ chức" />
       <div className="wrapper">
         <div className="box">
-          <h3 className="title">Lễ cưới</h3>
+          <h3 className="title">Wedding Party</h3>
           <ul className="items">
             <li className="item">
-              <span className="label">Thời gian</span>
+              <span className="label">Time</span>
               <span className="txt">10.11.2024 11:00</span>
             </li>
             <li className="item">
-              <span className="label">Địa điểm</span>
+              <span className="label">Location</span>
               <span lassName="txt">Maison De Charme</span>
             </li>
             <li className="item">

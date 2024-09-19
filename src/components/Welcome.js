@@ -102,24 +102,24 @@ export default function Welcome() {
   }, [])
   return (
     <StyledWrapper>
-      <Title title="Chào mừng bạn đến tham dự" />
+      <Title title="Welcome to attend our wedding party" />
       <div className="wrapper">
         <div className="countdown">
           <div className="box">
             <span className="num day">{value.day}</span>
-            <span className="txt">ngày</span>
+            <span className="txt">days</span>
           </div>
           <div className="box">
             <span className="num hour">{value.hour}</span>
-            <span className="txt">giờ</span>
+            <span className="txt">hours</span>
           </div>
           <div className="box">
             <span className="num min">{value.minute}</span>
-            <span className="txt">phút</span>
+            <span className="txt">minutes</span>
           </div>
           <div className="box">
             <span className="num second">{value.second}</span>
-            <span className="txt">giây</span>
+            <span className="txt">seconds</span>
           </div>
         </div>
         <div className="cele">
@@ -131,7 +131,7 @@ export default function Welcome() {
       </div>
       <div className="wrapper">
         <div className="countdown">
-          <span className="txt">Tụi mình sắp cưới nhau rồi!</span>
+          <span className="txt">We're getting married!</span>
         </div>
       </div>
     </StyledWrapper>

@@ -129,10 +129,10 @@ export default function FirstView() {
     // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, {
       strings: [
-        'Tụi mình <strong>gặp</strong> nhau',
-        'Tụi mình <strong>yêu</strong> nhau',
-        'Tụi mình <strong>bên</strong> nhau',
-        'Tụi mình sắp <strong>cưới</strong> nhau!'
+        'We <strong>met</strong>',
+        'We <strong>got</strong> each other',
+        'We <strong>fell in love</strong>',
+        'We <strong>got</strong> married!'
       ],
       typeSpeed: 200,
       backSpeed: 50,
@@ -169,7 +169,7 @@ export default function FirstView() {
           <div className="date">
             <div className="countdown">
               <span className="num day">
-                {value.day} ngày<br/>{value.hour} giờ<br/>{value.minute} phút<br/>{value.second} giây
+                {value.day} days<br/>{value.hour} hours<br/>{value.minute} minutes<br/>{value.second} seconds
               </span>
             </div>
             <div className="time">10.11.2024</div>
