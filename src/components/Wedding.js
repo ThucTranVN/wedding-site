@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Title from './SectionTitle'
-import WeddingImage from '../assets/imgs/wedding.png'
 import MapImg from '../assets/imgs/map.png'
+
+const WeddingImage = 'https://b1560601.tinifycdn.com/w15.png';
 
 const StyledWrapper = styled.section`
   z-index: 1;

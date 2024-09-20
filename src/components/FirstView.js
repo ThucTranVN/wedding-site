@@ -3,10 +3,12 @@ import styled, { keyframes } from 'styled-components'
 import { HiChevronDoubleDown } from 'react-icons/hi'
 import Confetti from 'confetti-react'
 import Typed from 'typed.js'
-import FirstBlood from '../assets/imgs/fb.png'
 
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
+
+const FirstBlood = `https://b1560601.tinifycdn.com/w27.png`;
+
 const AniDown = keyframes`
     from{
         transform:translateY(-10px);
