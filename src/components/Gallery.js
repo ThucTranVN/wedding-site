@@ -97,9 +97,9 @@ const weddings = Array.from(Array(13).keys())
   .filter(
     (p) => !['w2', 'w6', 'w7', 'w13', 'w19', 'w26', 'w21', 'w10'].includes(p)
   )
-const dailys = Array.from(Array(1).keys())
+const dailys = Array.from(Array(10).keys())
   .map((v, idx) => `d${idx + 1}`)
-  .filter((p) => !['d7', 'd12', 'd15', 'd20', 'd21'].includes(p))
+  .filter((p) => !['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7'].includes(p))
 // console.log({ weddings })
 const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   const viewCount = useRef(0)
