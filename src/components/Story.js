@@ -13,20 +13,24 @@ const StyledWrapper = styled.section`
   width: 100%;
   background-color: #eee;
   padding: 0.3rem 0;
+
   .tl {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     .items {
       overflow-y: scroll;
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
+
       .item {
         display: flex;
         align-items: center;
         margin-bottom: 0.4rem;
+
         .content {
           position: relative;
           background-color: #fff;
@@ -37,15 +41,18 @@ const StyledWrapper = styled.section`
           padding: 0.2rem;
           border-radius: 0.12rem;
           width: 4rem;
+
           .title {
             font-size: 0.3rem;
           }
+
           .date {
             margin: 0.1rem 0;
             font-style: oblique;
             font-size: 0.12rem;
             color: #666;
           }
+
           .desc {
             height: 1.5rem;
             overflow: scroll;
@@ -54,14 +61,17 @@ const StyledWrapper = styled.section`
             font-size: 0.15rem;
             display: flex;
             flex-direction: column;
+
             span {
               margin-bottom: 0.1rem;
             }
           }
         }
+
         &:nth-child(even) {
           flex-direction: row-reverse;
         }
+
         .heart {
           margin: 0 0.2rem;
           font-size: 0.3rem;
@@ -69,12 +79,14 @@ const StyledWrapper = styled.section`
           animation-direction: alternate;
           animation-delay: inherit;
         }
+
         .pic {
           position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 0;
+
           img {
             z-index: 8;
             border-radius: 50%;
@@ -84,19 +96,63 @@ const StyledWrapper = styled.section`
             object-fit: cover;
           }
         }
+
+        /* For smaller screens */
         @media screen and (max-width: 414px) {
           flex-direction: column-reverse;
+
           .heart {
             margin: 0.2rem 0;
           }
+
           &:nth-child(even) {
             flex-direction: column-reverse;
+          }
+        }
+
+        /* For landscape screens with constrained height */
+        @media screen and (min-width: 415px) and (max-height: 600px) {
+          flex-direction: row;
+
+          .heart {
+            margin: 0 0.2rem;
+          }
+
+          &:nth-child(even) {
+            flex-direction: row-reverse;
+          }
+        }
+
+        /* Portrait orientation */
+        @media (orientation: portrait) {
+          flex-direction: column-reverse;
+
+          .heart {
+            margin: 0.2rem 0;
+          }
+
+          &:nth-child(even) {
+            flex-direction: column-reverse;
+          }
+        }
+
+        /* Landscape orientation */
+        @media (orientation: landscape) {
+          flex-direction: row;
+
+          .heart {
+            margin: 0 0.2rem;
+          }
+
+          &:nth-child(even) {
+            flex-direction: row-reverse;
           }
         }
       }
     }
   }
-`
+`;
+
 const prefix =
   'https://b1560601.tinifycdn.com'
 const items = [

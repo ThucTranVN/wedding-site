@@ -9,14 +9,34 @@ const StyledWrapper = styled.section`
   width: 100%;
   background-color: #fff;
   padding: 0.3rem 0;
+
   .cp {
     display: flex;
     align-items: center;
     justify-content: center;
+
     @media screen and (max-width: 414px) {
       flex-direction: column;
       margin: 0;
     }
+
+    @media screen and (min-width: 415px) and (max-height: 600px) {
+      /* Landscape mode with specific height */
+      flex-direction: row;
+    }
+
+    @media (orientation: portrait) {
+      /* Portrait mode */
+      flex-direction: column;
+      margin: 0;
+    }
+
+    @media (orientation: landscape) {
+      /* Landscape mode */
+      flex-direction: row;
+      margin: 0.4rem;
+    }
+
     .profile {
       color: #222;
       padding: 0.4rem;
@@ -25,6 +45,7 @@ const StyledWrapper = styled.section`
       align-items: center;
       justify-content: center;
       margin-right: 0.4rem;
+
       .pic {
         width: 2.8rem;
         height: 2.8rem;
@@ -32,32 +53,35 @@ const StyledWrapper = styled.section`
         background-size: 80%, 100%;
         background-position: center;
         overflow: hidden;
+
         &.boy {
-          background-image: url(${AIu}),
-            url(${FrameImage});
+          background-image: url(${AIu}), url(${FrameImage});
         }
         &.girl {
-          background-image: url(${EIu}),
-            url(${FrameImage});
+          background-image: url(${EIu}), url(${FrameImage});
         }
+
         img {
           width: 100%;
           height: 100%;
         }
       }
+
       .name {
         font-family: 'AutumnInNovember';
         font-size: 0.4rem;
         padding: 0.2rem 0;
         margin: 0.2rem 0;
       }
+
       .intro {
         font-size: 0.12rem;
         white-space: nowrap;
       }
     }
   }
-`
+`;
+
 const tips = {
   h: {
     m: 'left',
@@ -69,14 +93,30 @@ const tips = {
   }
 }
 export default function Couple({ popupDan }) {
-  const [pos, setPos] = useState('h')
+  const [pos, setPos] = useState('v')
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      if (window.innerWidth <= 414) {
-        setPos('v')
-      }
+      const checkScreenSize = () => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        // Example logic: set 'v' for portrait, 'h' for landscape
+        if (height > width) {
+          setPos('v'); // Portrait
+        } else {
+          setPos('h'); // Landscape
+        }
+      };
+
+      // Run the check on mount and on window resize
+      checkScreenSize();
+      window.addEventListener('resize', checkScreenSize);
+
+      // Cleanup the event listener on unmount
+      return () => window.removeEventListener('resize', checkScreenSize);
     }
-  }, [])
+  }, []);
+
   const handleDC = () => {
     popupDan('Bride · Groom')
   }
