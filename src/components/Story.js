@@ -155,7 +155,7 @@ export default function Couple() {
     <StyledWrapper>
       <Title title="Our sweet journey" />
       <div className="tl">
-      <p className="desc"> Coming soon </p>
+      <p className="desc"> Coming soonnn </p>
         {/* <ul className="items">
           {items.map(({ title, datetime, desc, picture }, idx) => (
             <li key={title} className="item">

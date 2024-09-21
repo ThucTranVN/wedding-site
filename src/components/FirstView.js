@@ -7,7 +7,7 @@ import Typed from 'typed.js'
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 
-const FirstBlood = `https://b1560601.tinifycdn.com/w27.png`;
+const FirstBlood = 'https://b1560601.tinifycdn.com/w2.png'
 
 const AniDown = keyframes`
     from{
@@ -26,10 +26,11 @@ const StyledWrapper = styled.section`
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 1;
+    position: relative;
     width: 100%;
-    max-width: 2200px;
     margin: auto;
-    height: 100vh;
+    max-width: 1800px;
     background-image: url(${FirstBlood});
     background-repeat: no-repeat;
     background-size: cover;

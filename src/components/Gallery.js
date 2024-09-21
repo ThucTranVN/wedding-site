@@ -92,14 +92,14 @@ const StyledWrapper = styled.section`
   }
 `
 
-const weddings = Array.from(Array(35).keys())
+const weddings = Array.from(Array(30).keys())
   .map((v, idx) => `w${idx + 1}`)
   .filter(
-    (p) => !['w1'].includes(p)
+    (p) => !['w1','w2','w3'].includes(p)
   )
-const dailys = Array.from(Array(10).keys())
+const dailys = Array.from(Array(9).keys())
   .map((v, idx) => `d${idx + 1}`)
-  .filter((p) => !['d1'].includes(p))
+  .filter((p) => !['d1', 'd2','d3'].includes(p))
 // console.log({ weddings })
 const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   const viewCount = useRef(0)

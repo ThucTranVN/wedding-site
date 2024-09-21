@@ -124,14 +124,8 @@ export default function Welcome() {
         </div>
         <div className="cele">
           <div className="flowers">
-            <Confetti gravity={0.2} numberOfPieces={150} />
+            <Confetti gravity={0.2} numberOfPieces={300} />
           </div>
-
-        </div>
-      </div>
-      <div className="wrapper">
-        <div className="countdown">
-          <span className="txt">We're getting married!</span>
         </div>
       </div>
     </StyledWrapper>

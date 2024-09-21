@@ -121,7 +121,7 @@ export default function Wedding() {
             </li>
             <li className="item">
               <span className="label">Location</span>
-              <span lassName="txt">Maison De Charme</span>
+              <span className="txt">Maison De Charme</span>
             </li>
             <li className="item">
               <div className="txt loc">
