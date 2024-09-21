@@ -133,7 +133,7 @@ export default function Celebrate({ closeDan, dan = 'Super long memory egg' }) {
   }, [dan])
   return (
     <StyledPopup>
-      <Confetti gravity={0.2} numberOfPieces={300} />
+      <Confetti gravity={0.2} numberOfPieces={200} />
       <div className="tip">
         <h3 className="title">🎉🎉🎉Congratulations!🎉🎉🎉</h3>
         <div className="content" ref={el}></div>

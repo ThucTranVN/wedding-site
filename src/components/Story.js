@@ -88,8 +88,8 @@ const StyledWrapper = styled.section`
 
           img {
             z-index: 8;
-            border-radius: 50%;
-            border: 3px solid #999;
+            border-radius: 30%;
+            border: 2px solid #222;
             width: 2rem;
             height: 2rem;
             object-fit: cover;
