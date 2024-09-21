@@ -14,6 +14,11 @@ const Wrapper = styled.footer`
   background-position: center;
   background-attachment: fixed;
 
+  @media screen and (max-width: 1024px) {
+    background-size: contain; /* Contain image for smaller screens */
+    background-attachment: scroll; /* Prevent issues on smaller devices */
+  }
+
   text-align: center;
   .copyright,
   .powered_by,

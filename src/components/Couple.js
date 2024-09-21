@@ -9,7 +9,6 @@ import BGIMG from '../assets/imgs/welcome-bg.png'
 const StyledWrapper = styled.section`
   width: 100%;
   background-color: #fff;
-  padding: 0.3rem 0;
 
   /* Background image settings for responsiveness */
   background-image: url(${BGIMG});
@@ -18,10 +17,10 @@ const StyledWrapper = styled.section`
   background-position: center;
   background-attachment: fixed;
 
-  // @media screen and (max-width: 1024px) {
-  //   background-size: contain; /* Contain image for smaller screens */
-  //   background-attachment: scroll; /* Prevent issues on smaller devices */
-  // }
+  @media screen and (max-width: 1024px) {
+    background-size: contain; /* Contain image for smaller screens */
+    background-attachment: scroll; /* Prevent issues on smaller devices */
+  }
 
   .cp {
     display: flex;

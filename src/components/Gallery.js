@@ -27,7 +27,12 @@ const StyledWrapper = styled.section`
   background-size: cover; /* Image covers the entire section */
   background-position: center;
   background-attachment: fixed;
-  padding: 0.3rem 0;
+
+  @media screen and (max-width: 1024px) {
+    background-size: contain; /* Contain image for smaller screens */
+    background-attachment: scroll; /* Prevent issues on smaller devices */
+  }
+
   margin: auto;
   .wrapper {
     width: 100%;

@@ -12,7 +12,6 @@ const StyledWrapper = styled.section`
   margin: auto;
   max-width: 1800px;
   background-color: #fff;
-  padding: 0.3rem 0;
   background: url(${WeddingImage});
   background-repeat: no-repeat;
   background-size: cover;

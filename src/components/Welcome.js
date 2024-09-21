@@ -7,13 +7,17 @@ import WelcomeBGImg from '../assets/imgs/welcome-bg.png'
 
 const StyledWrapper = styled.section`
   width: 100%;
-  padding: 0.3rem 0 1rem 0;
 
   background-image: url(${WelcomeBGImg});
   background-repeat: no-repeat;
   background-size: cover; /* Image covers the entire section */
   background-position: center;
   background-attachment: fixed;
+
+  @media screen and (max-width: 1024px) {
+    background-size: contain; /* Contain image for smaller screens */
+    background-attachment: scroll; /* Prevent issues on smaller devices */
+  }
 
   .wrapper {
     width: 100%;
