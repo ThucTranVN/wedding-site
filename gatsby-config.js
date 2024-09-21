@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Kiến Thức & Chu Thảo - We are getting married',
+    title: 'Kiến Thức & Phương Thảo - We are getting married',
     author: 'Kiến Thức',
-    description: 'TDK wedding website'
+    description: 'Our wedding site'
   },
   plugins: [
     {
