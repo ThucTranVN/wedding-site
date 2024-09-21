@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Title from './SectionTitle'
-import FrameImage from '../assets/imgs/frame.png'
+import FrameImage from '../assets/imgs/frame-removebg.png'
 import EIu from '../assets/imgs/eiu.png'
 import AIu from '../assets/imgs/aiu.png'
+import BGIMG from '../assets/imgs/welcome-bg.png'
 
 const StyledWrapper = styled.section`
   width: 100%;
   background-color: #fff;
   padding: 0.3rem 0;
+
+  /* Background image settings for responsiveness */
+  background-image: url(${BGIMG});
+  background-repeat: no-repeat;
+  background-size: cover; /* Image covers the entire section */
+  background-position: center;
+  background-attachment: fixed;
+
+  // @media screen and (max-width: 1024px) {
+  //   background-size: contain; /* Contain image for smaller screens */
+  //   background-attachment: scroll; /* Prevent issues on smaller devices */
+  // }
 
   .cp {
     display: flex;
@@ -38,6 +51,8 @@ const StyledWrapper = styled.section`
     }
 
     .profile {
+      -webkit-text-stroke-width: 0.2px;
+      -webkit-text-stroke-color: black;
       color: #222;
       padding: 0.4rem;
       display: flex;
@@ -47,17 +62,19 @@ const StyledWrapper = styled.section`
       margin-right: 0.4rem;
 
       .pic {
-        width: 2.8rem;
-        height: 2.8rem;
+        width: 3rem;
+        height: 3rem;
         background-repeat: no-repeat;
-        background-size: 80%, 100%;
+        background-size: 75%, 100%;
         background-position: center;
         overflow: hidden;
 
         &.boy {
+          background-position-y: 62%;
           background-image: url(${AIu}), url(${FrameImage});
         }
         &.girl {
+          background-position-y: 62%;
           background-image: url(${EIu}), url(${FrameImage});
         }
 

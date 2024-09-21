@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Title from './SectionTitle'
 import MapImg from '../assets/imgs/map.png'
 
-const WeddingImage = 'https://b1560601.tinifycdn.com/w15.png';
+const WeddingImage = 'https://b1560601.tinifycdn.com/d8.png';
 
 const StyledWrapper = styled.section`
   z-index: 1;

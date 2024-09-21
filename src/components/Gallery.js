@@ -5,6 +5,7 @@ import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-zoom.css'
 import 'lightgallery/css/lg-thumbnail.css'
 import 'lightgallery/css/lg-transitions.css'
+import WelcomeBGImg from '../assets/imgs/welcome-bg.png'
 
 // import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
@@ -21,6 +22,11 @@ const StyledWrapper = styled.section`
   width: 100%;
   max-width: 1800px;
   background-color: #fff;
+  background-image: url(${WelcomeBGImg});
+  background-repeat: no-repeat;
+  background-size: cover; /* Image covers the entire section */
+  background-position: center;
+  background-attachment: fixed;
   padding: 0.3rem 0;
   margin: auto;
   .wrapper {

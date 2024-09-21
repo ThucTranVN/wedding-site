@@ -3,11 +3,18 @@ import styled from 'styled-components'
 import Confetti from 'confetti-react'
 import Title from './SectionTitle'
 import useTimer from '../useTimer'
+import WelcomeBGImg from '../assets/imgs/welcome-bg.png'
 
 const StyledWrapper = styled.section`
   width: 100%;
-  /* background-color: #eee; */
   padding: 0.3rem 0 1rem 0;
+
+  background-image: url(${WelcomeBGImg});
+  background-repeat: no-repeat;
+  background-size: cover; /* Image covers the entire section */
+  background-position: center;
+  background-attachment: fixed;
+
   .wrapper {
     width: 100%;
     display: flex;
@@ -16,8 +23,6 @@ const StyledWrapper = styled.section`
     position: relative;
     .countdown {
       width: 100%;
-      /* max-width: 1400px; */
-      background: linear-gradient(145deg, #ca3d27, #ca0d00);
       opacity: 0.8;
       padding: 0.3rem 0;
       display: flex;

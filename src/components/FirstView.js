@@ -19,7 +19,8 @@ const AniDown = keyframes`
     }
 `
 const StyledWrapper = styled.section`
-  background-color: #e4e3ea;
+  background-color: #fff;
+
   .inner_wrapper {
     display: flex;
     align-items: center;
@@ -29,20 +30,31 @@ const StyledWrapper = styled.section`
     max-width: 2200px;
     margin: auto;
     height: 100vh;
+
+    /* Background image settings for responsiveness */
     background-image: url(${BGImg});
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Image covers the entire section */
     background-position: center;
     background-attachment: fixed;
+
+    @media screen and (max-width: 1024px) {
+      background-size: contain; /* Contain image for smaller screens */
+      background-attachment: scroll; /* Prevent issues on smaller devices */
+    }
+
+    /* Shadow effect behind the background image */
     &:after {
       position: absolute;
       content: '';
-      width: 100%;
-      height: 100%;
+      width: 100%;  /* Cover the entire width */
+      height: 100%; /* Cover the entire height */
       top: 0;
       left: 0;
-      box-shadow: 0 0 100px 10px #e4e3ea inset;
+      box-shadow: 0 0 100px 10px rgba(0, 0, 0, 0) inset; /* Shadow inside the box */
+      z-index: 1; /* Keep it behind other content */
     }
+
     .box {
       z-index: 99;
       margin-top: 1.2rem;
@@ -50,7 +62,7 @@ const StyledWrapper = styled.section`
       padding: 0.5rem;
       background-color: #fff;
       border-radius: 0.4rem;
-      box-shadow: 0 2px 8px #ccc;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       background-image: url(${FrameImage});
       background-repeat: no-repeat;
       background-size: 90%;
@@ -62,29 +74,35 @@ const StyledWrapper = styled.section`
       filter: opacity(0.8);
       width: 3.8rem;
       height: 3.8rem;
+
       .title {
         font-family: 'AutumnInNovember';
         display: flex;
         font-size: 0.48rem;
         padding: 0.2rem 0;
         margin-bottom: 0.2rem;
+
         span {
           white-space: nowrap;
+
           strong {
             font-weight: bold;
             color: #be5678;
           }
         }
       }
+
       .date {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .time {
           font-size: 0.16rem;
           color: #999;
           margin-top: 0.12rem;
         }
+
         .countdown {
           font-family: monospace;
           font-weight: 800;
@@ -104,7 +122,8 @@ const StyledWrapper = styled.section`
     animation-direction: alternate-reverse;
     animation: ${AniDown} 1s infinite;
   }
-`
+`;
+
 // initialTime: initCountNum,
 // const initCountNum = 3000;
 export default function FirstView() {

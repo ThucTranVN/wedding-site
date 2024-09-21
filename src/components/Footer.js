@@ -1,11 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import WelcomeBGImg from '../assets/imgs/welcome-bg.png'
 
 const Wrapper = styled.footer`
   width: 100%;
   max-width: 100%;
-  padding: 1rem 0 0.4rem 0;
+  padding: 0rem 0 0.4rem 0;
+
+  background-image: url(${WelcomeBGImg});
+  background-repeat: no-repeat;
+  background-size: cover; /* Image covers the entire section */
+  background-position: center;
+  background-attachment: fixed;
+
   text-align: center;
   .copyright,
   .powered_by,
@@ -15,7 +23,7 @@ const Wrapper = styled.footer`
     opacity: 0.75;
     margin-bottom: 0.1rem;
     text-transform: uppercase;
-    color: #ccc;
+    color: #222;
     a {
       margin: 0 0.1rem;
     }
