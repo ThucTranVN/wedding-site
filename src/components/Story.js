@@ -167,28 +167,26 @@ const prefix =
 const items = [
   {
     title: 'Encounter: Luck casts a spell',
-    datetime: '16.02.2022',
+    datetime: '',
     desc: `<span>Our first meeting happens at a company party. Although it was our first contact, it felt like we had known each other for a long time. This familiar and surprising feeling made us get closer to each other little by little. </span>`,
     picture: `${prefix}/story/s1.jpg`
   },
   {
-    title: 'Understanding the meaning of love',
-    datetime: '23.06.2022',
+    title: 'Understanding: The meaning of love',
+    datetime: '',
     desc: `<span>Cupid's arrow hit us, and the air was filled with the sweet smell of love.</span>
     <span>She was so beautiful in my eyes.</span>
     <span>We both love nature and the animals.</span>
     <span>We are fond of traveling to Dalat, the location where I proposed.</span>
     <span>We enjoy viewing travel vlogs, romantic films, and enjoying our rice paper (which she prefers the most) while watching.</span>
-    <span>It was inevitable that there would be discord in our lives after we lived together.</span>
-    <span>I am inclined to be logical, while she is inclined to be emotive.</span>
-    <span>She is impatient, and I am slow-tempered..</span>
-    <span>Fortunately, we have the ability to regain our composure and evaluate the situation in a timely manner, as well as to express our emotions and subsequently adapt to one another following each disagreement..</span>
-    <span>A good personal connection is the outcome of getting along and interacting. We are willing to provide love and energy to one another, and we are always appreciative..</span>`,
+    <span>It was inevitable that there would be discord in our lives when we were together.</span>
+    <span>Fortunately, we have the ability to regain our composure and evaluate the situation in a timely manner, as well as to express our emotions and subsequently adapt to one another following each disagreement.</span>
+    <span>A good personal connection is the outcome of getting along and interacting. We are willing to provide love and energy to one another, and we are always appreciative.</span>`,
     picture: `${prefix}/story/s2.jpg`
   },
   {
     title: 'Stay together: Peace of mind is where we belong',
-    datetime: '2020.06.06',
+    datetime: '',
     desc: `<span>It was not love at first sight for either of us.</span>
     <span>There was attraction, certainly, at least on my part.</span>
     <span>For two years together, we found something far greater: we found friendship.</span>
