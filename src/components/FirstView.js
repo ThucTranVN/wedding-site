@@ -3,11 +3,10 @@ import styled, { keyframes } from 'styled-components'
 import { HiChevronDoubleDown } from 'react-icons/hi'
 import Confetti from 'confetti-react'
 import Typed from 'typed.js'
-
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 
-const FirstBlood = 'https://b1560601.tinifycdn.com/w2.png'
+const BGImg = 'https://b1560601.tinifycdn.com/w2.png'
 
 const AniDown = keyframes`
     from{
@@ -26,12 +25,11 @@ const StyledWrapper = styled.section`
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1;
-    position: relative;
     width: 100%;
+    max-width: 2200px;
     margin: auto;
-    max-width: 1800px;
-    background-image: url(${FirstBlood});
+    height: 100vh;
+    background-image: url(${BGImg});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
