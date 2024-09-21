@@ -78,7 +78,7 @@ export default function Couple({ popupDan }) {
     }
   }, [])
   const handleDC = () => {
-    popupDan('双击666')
+    popupDan('Bride · Groom')
   }
   return (
     <StyledWrapper>
