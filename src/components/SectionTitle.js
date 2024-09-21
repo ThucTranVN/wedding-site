@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import TitleImage from '../assets/imgs/title.bg.png'
 const StyledTitle = styled.h2`
-  font-family: 'SP-F';
+  font-family: 'Autumn in November';
   font-weight: 800;
   z-index: 998;
   width: 100%;

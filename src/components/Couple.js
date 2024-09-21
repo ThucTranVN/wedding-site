@@ -46,7 +46,7 @@ const StyledWrapper = styled.section`
         }
       }
       .name {
-        font-family: 'SP-F';
+        font-family: 'Autumn in November';
         font-size: 0.4rem;
         padding: 0.2rem 0;
         margin: 0.2rem 0;

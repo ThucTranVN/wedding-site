@@ -80,7 +80,7 @@ const StyledWrapper = styled.section`
       }
       .txt {
         white-space: nowrap;
-        font-family: 'SP-F';
+        font-family: 'Autumn in November';
         position: absolute;
         top: 50%;
         left: 50%;
