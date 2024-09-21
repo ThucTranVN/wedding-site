@@ -25,7 +25,7 @@ const StyledWrapper = styled.section`
     @media (orientation: portrait) {
       /* Portrait mode */
       flex-direction: column;
-      margin: 0;
+      margin: 0.4rem;
     }
 
     @media (orientation: landscape) {
