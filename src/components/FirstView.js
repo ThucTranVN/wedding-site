@@ -63,7 +63,7 @@ const StyledWrapper = styled.section`
       width: 3.8rem;
       height: 3.8rem;
       .title {
-        font-family: 'Autumn in November';
+        font-family: 'AutumnInNovember';
         display: flex;
         font-size: 0.48rem;
         padding: 0.2rem 0;

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import AutumnInNovemberFont from '../assets/font/Autumn in November.ttf'
+import AutumnInNovemberFont from '../assets/font/Autumn-In-November.ttf'
 
 const CommonStyle = createGlobalStyle`
  html{
@@ -36,8 +36,8 @@ const CommonStyle = createGlobalStyle`
 }
 
 @font-face {
-    font-family: "Autumn in November";
-    src: url(${AutumnInNovemberFont}) format('truetype');
+    font-family: "AutumnInNovember";
+    src: local("AutumnInNovember") url(${AutumnInNovemberFont}) format('truetype');
     font-style: normal;
     font-weight: normal;
   }
