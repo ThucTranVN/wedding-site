@@ -74,6 +74,8 @@ const StyledWrapper = styled.section`
           background-image: url(${AIu}), url(${FrameImage});
         }
         &.girl {
+          background-size: 70%;
+          background-position-x: 45%;
           background-position-y: 62%;
           background-image: url(${EIu}), url(${FrameImage});
         }
