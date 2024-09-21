@@ -98,52 +98,43 @@ const StyledWrapper = styled.section`
   }
 `
 const prefix =
-  'https://g-store.oss-cn-beijing.aliyuncs.com/works/wedding/story.'
+  'https://b1560601.tinifycdn.com'
 const items = [
   {
     title: 'Encounter: Luck casts a spell~',
-    datetime: '2020.05.06',
-    desc: `<span>Although it was our first contact, it felt like we had known each other for a long time. This familiar and surprising feeling made us get closer to each other little by little. </span>`,
-    picture: `${prefix}first.jpg?x-oss-process=image/resize,w_300`
+    datetime: '16.02.2022',
+    desc: `<span>Our first meeting happens at a company party. Although it was our first contact, it felt like we had known each other for a long time. This familiar and surprising feeling made us get closer to each other little by little. </span>`,
+    picture: `${prefix}/story/s1.jpg`
   },
   {
-    title: '相知：爱情中的模样~',
-    datetime: '2020.05.23',
-    desc: `<span>丘比特之箭射中了我们，空气都是甜甜的玉米味儿。</span>
-    <span>我们都爱大自然、且喜欢户外。</span>
-    <span>我们去永定河旁边的乡间小路探险，漫无目的地边走边玩，落日余晖下的她，真的好美。</span>
-    <span>我们一起爬好汉坡，蹭免费的植物园门票，欢呼雀跃的我们，像极了小孩子。</span>
-    <span>我们还挑战狗牙山10km穿越，有点冒险，很刺激，但她吓得不行，并严令禁止我再次挑战，她说：不想拿自己的生命冒险，当然也不想失去我。</span>
-    <span>我们喜欢看小说，喜欢从别人的故事中汲取人生智慧，甚至发表过一模一样的小说解读。</span>
-    <span>我们喜欢听歌疗愈，她听的歌大多痞痞的有点酷，我听得歌就是温柔偏大众了。</span>
-    <span>我们穿衣风格、消费习惯均高度相似，甚至脖子右侧有个一模一样的痣，上辈子的我们，可能是兄妹。</span>
-    <span>我们一起生活后，当然也免不了生活的摩擦。</span>
-    <span>我偏理性，她偏感性。</span>
-    <span>我是个慢性子，她是个急脾气。</span>
-    <span>我生气起来不爱说话，她生气起来爱飙狠话。</span>
-    <span>好在每次吵架我们都能冷静下来及时复盘，并学着去表达自己的感受，然后互相调整。</span>
-    <span>好的亲密关系是相处磨合出来的，我们愿意为了彼此去付出爱与精力，并时刻感恩。</span>`,
-    picture: `${prefix}bws.png?x-oss-process=image/resize,w_300`
+    title: 'Understanding the meaning of love.~',
+    datetime: '23.06.2022',
+    desc: `<span>Cupid's arrow hit us, and the air was filled with the sweet smell of love。</span>
+    <span>She was so beautiful in my eyes。</span>
+    <span>We both love nature and the animals。</span>
+    <span>We are fond of traveling to Dalat, the location where I proposed。</span>
+    <span>We enjoy viewing travel vlogs, romantic films, and enjoying our rice paper (which she prefers the most) while watching。</span>
+    <span>It was inevitable that there would be discord in our lives after we lived together。</span>
+    <span>I am inclined to be logical, while she is inclined to be emotive。</span>
+    <span>She is impatient, and I am slow-tempered.。</span>
+    <span>Fortunately, we have the ability to regain our composure and evaluate the situation in a timely manner, as well as to express our emotions and subsequently adapt to one another following each disagreement.。</span>
+    <span>A good personal connection is the outcome of getting along and interacting. We are willing to provide love and energy to one another, and we are always appreciative.。</span>`,
+    picture: `${prefix}/story/s2.jpg`
   },
   {
-    title: '相守：心安即是归处',
+    title: 'Stay together: Peace of mind is where we belong.',
     datetime: '2020.06.06',
-    desc: `<span>不管是租房，还是买房，只要心有所属，哪里就是家。</span>
-    <span>我们一起生活后，迫切的需要有自己的小家，自己的厨房</span>
-    <span>但问题是老家已有一个买来的住所，何不离京呢？</span>
-    <span>北京适合生存，不适合生活。</span>
-    <span>两人一拍即合，锅碗瓢盆打包一车搞定，吃完最后一顿火锅唱着歌，一路小跑就离京了。</span>
-    <span>我们的小家于5月份开始硬装，7月初着手软装。</span>
-    <span>从家徒四壁，到找装修公司，多次确认设计方案，然后灯具，家具，家电依次入场...</span>
-    <span>看到小家一点点变成我们想要的样子，真是发自内心的快乐。</span>
-    <span>对于这种突如其来的个人空间，我们沉浸在极大的新鲜感与兴奋感里，无法自拔。</span>
-    <span>我经常各个房间晃来晃去，她经常拿着盒尺量来量去，然后不约而同的相视，咯咯傻笑。</span>
-
-    <span>2021年8月23日，我们领证了！</span>
-    <span>只有那5分钟的紧张激动，很快就恢复平静。</span>
-    <span>可能在我心里，我们早就结婚了，这已然成为我们的日常生活。</span>
-    <span>我们以后将更珍惜彼此，小心呵护这份难得的感情~ 有福同享、有难同当，齐心协力、共同为我们的美好未来努力！</span>`,
-    picture: `${prefix}banjia.jpg?x-oss-process=image/resize,w_300`
+    desc: `<span>It was not love at first sight for either of us。</span>
+    <span>There was attraction, certainly, at least on my part。</span>
+    <span>For two years together, we found something far greater: we found friendship。</span>
+    <span>When really, all alone, we simply enjoy each other’s company so much. We could not stay away from one another。</span>
+    <span>I have never been a man enjoy flirting, or chatting, or, indeed, talking at all. But with her, conversation has always been easy。</span>
+    <span>Your laughter brings me joy. To meet a beautiful girl is one thing, but to meet your best friend in the most beautiful girl is something entirely apart。</span>
+    <span>I understand that friendship is the best possible foundation a marriage can have。</span>
+    <span>In my heart, we've been married for a long time, and this has been our daily routine。</span>
+    <span>We will be more devoted to one another in the future and will meticulously preserve this relationship。</span>
+    <span>Share both joys and challenges, collaborate, and strive diligently for our glorious future!。</span>`,
+    picture: `${prefix}/story/s3.jpg`
   }
 ]
 function createMarkup(html) {
@@ -155,8 +146,7 @@ export default function Couple() {
     <StyledWrapper>
       <Title title="Our sweet journey" />
       <div className="tl">
-      <p className="desc"> Coming soonnn </p>
-        {/* <ul className="items">
+        <ul className="items">
           {items.map(({ title, datetime, desc, picture }, idx) => (
             <li key={title} className="item">
               <div className="pic">
@@ -176,7 +166,7 @@ export default function Couple() {
               </div>
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
     </StyledWrapper>
   )
