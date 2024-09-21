@@ -3,21 +3,9 @@ import styled from 'styled-components'
 import Confetti from 'confetti-react'
 import Title from './SectionTitle'
 import useTimer from '../useTimer'
-import WelcomeBGImg from '../assets/imgs/welcome-bg.png'
 
 const StyledWrapper = styled.section`
   width: 100%;
-
-  background-image: url(${WelcomeBGImg});
-  background-repeat: no-repeat;
-  background-size: cover; /* Image covers the entire section */
-  background-position: center;
-  background-attachment: fixed;
-
-  @media screen and (max-width: 1024px) {
-    background-size: contain; /* Contain image for smaller screens */
-    background-attachment: scroll; /* Prevent issues on smaller devices */
-  }
 
   .wrapper {
     width: 100%;

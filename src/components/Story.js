@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Title from './SectionTitle'
-import StoryBGImg from '../assets/imgs/welcome-bg.png'
 
 const AniBeating = keyframes`
     from{
@@ -13,19 +12,6 @@ const AniBeating = keyframes`
 `
 const StyledWrapper = styled.section`
   width: 100%;
-  background-color: #eee;
-
-  /* Background image settings for responsiveness */
-  background-image: url(${StoryBGImg});
-  background-repeat: no-repeat;
-  background-size: cover; /* Image covers the entire section */
-  background-position: center;
-  background-attachment: fixed;
-
-  @media screen and (max-width: 1024px) {
-    background-size: contain; /* Contain image for smaller screens */
-    background-attachment: scroll; /* Prevent issues on smaller devices */
-  }
 
   .tl {
     display: flex;
@@ -193,7 +179,7 @@ const items = [
     datetime: '',
     desc: `<span>It was not love at first sight for either of us.</span>
     <span>There was attraction, certainly, at least on my part.</span>
-    <span>For two years together, we found something far greater: we found friendship.</span>
+    <span>Throughout our time together, we found something far greater: we found friendship.</span>
     <span>When really, all alone, we simply enjoy each other’s company so much. We could not stay away from one another.</span>
     <span>I have never been a man enjoy flirting, or chatting, or, indeed, talking at all. But with her, conversation has always been easy.</span>
     <span>Your laughter brings me joy. To meet a beautiful girl is one thing, but to meet your best friend in the most beautiful girl is something entirely apart.</span>

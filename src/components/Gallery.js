@@ -5,7 +5,6 @@ import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-zoom.css'
 import 'lightgallery/css/lg-thumbnail.css'
 import 'lightgallery/css/lg-transitions.css'
-import WelcomeBGImg from '../assets/imgs/welcome-bg.png'
 
 // import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
@@ -21,17 +20,6 @@ const StyledWrapper = styled.section`
   min-height: 50vh;
   width: 100%;
   max-width: 1800px;
-  background-color: #fff;
-  background-image: url(${WelcomeBGImg});
-  background-repeat: no-repeat;
-  background-size: cover; /* Image covers the entire section */
-  background-position: center;
-  background-attachment: fixed;
-
-  @media screen and (max-width: 1024px) {
-    background-size: contain; /* Contain image for smaller screens */
-    background-attachment: scroll; /* Prevent issues on smaller devices */
-  }
 
   margin: auto;
   .wrapper {

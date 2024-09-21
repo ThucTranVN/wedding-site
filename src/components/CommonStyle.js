@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import AutumnInNovemberFont from '../assets/font/Autumn-In-November.ttf'
+import BGIMG from '../assets/imgs/welcome-bg.png'
 
 const CommonStyle = createGlobalStyle`
  html{
@@ -11,6 +12,13 @@ const CommonStyle = createGlobalStyle`
     &::-webkit-scrollbar{
         display: none;
     }
+
+    /* Background image settings for responsiveness */
+    background-image: url(${BGIMG});
+    background-repeat: no-repeat;
+    background-size: cover; /* Image covers the entire section */
+    background-position: center;
+    background-attachment: fixed;
  }
  @media screen and (min-width: 1681px) {
     html {

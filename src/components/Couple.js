@@ -4,23 +4,9 @@ import Title from './SectionTitle'
 import FrameImage from '../assets/imgs/frame-removebg.png'
 import EIu from '../assets/imgs/eiu.png'
 import AIu from '../assets/imgs/aiu.png'
-import BGIMG from '../assets/imgs/welcome-bg.png'
 
 const StyledWrapper = styled.section`
   width: 100%;
-  background-color: #fff;
-
-  /* Background image settings for responsiveness */
-  background-image: url(${BGIMG});
-  background-repeat: no-repeat;
-  background-size: cover; /* Image covers the entire section */
-  background-position: center;
-  background-attachment: fixed;
-
-  @media screen and (max-width: 1024px) {
-    background-size: contain; /* Contain image for smaller screens */
-    background-attachment: scroll; /* Prevent issues on smaller devices */
-  }
 
   .cp {
     display: flex;
