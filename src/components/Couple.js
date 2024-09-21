@@ -88,7 +88,7 @@ export default function Couple({ popupDan }) {
           <div className="pic girl" onDoubleClick={handleDC}>
             <img src={FrameImage} alt="Bride" />
           </div>
-          <div className="name">Chu Thảo👰🏻</div>
+          <div className="name">Phương Thảo👰🏻</div>
           <div className="intro">
           There are three things I cannot live without: water, air, and that man on the {tips[pos].w}
           </div>
