@@ -152,10 +152,10 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
           key={photo}
           className="picture"
           data-sub-html={`<h4>${title[cate]}</h4>`}
-          data-src={`https://b1560601.tinifycdn.com/${photo}.png`}
+          data-src={`https://fifth-furtive-hoverfly.glitch.me/images/${photo}.png`}
         >
           <img
-            src={`https://b1560601.tinifycdn.com/${photo}.png`}
+            src={`https://fifth-furtive-hoverfly.glitch.me/images/${photo}.png`}
           />
         </div>
         )
