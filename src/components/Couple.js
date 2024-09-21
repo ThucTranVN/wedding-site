@@ -7,7 +7,6 @@ import AIu from '../assets/imgs/aiu.png'
 
 const StyledWrapper = styled.section`
   width: 100%;
-
   .cp {
     display: flex;
     align-items: center;

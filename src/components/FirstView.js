@@ -35,12 +35,13 @@ const StyledWrapper = styled.section`
     background-image: url(${BGImg});
     background-repeat: no-repeat;
     background-size: cover; /* Image covers the entire section */
-    background-position: center;
+    background-position-y: 50%;
     background-attachment: fixed;
 
     @media screen and (max-width: 1024px) {
       background-size: contain; /* Contain image for smaller screens */
       background-attachment: scroll; /* Prevent issues on smaller devices */
+      background-position-y: 100%;
     }
 
     /* Shadow effect behind the background image */

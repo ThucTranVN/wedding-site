@@ -101,6 +101,7 @@ export default function Welcome() {
     <StyledWrapper>
       <Title title="Welcome to attend our wedding party" />
       <div className="wrapper">
+      <Confetti gravity={0.2} numberOfPieces={150} />
         <div className="countdown">
           <div className="box">
             <span className="num day">{value.day}</span>
@@ -117,11 +118,6 @@ export default function Welcome() {
           <div className="box">
             <span className="num second">{value.second}</span>
             <span className="txt">seconds</span>
-          </div>
-        </div>
-        <div className="cele">
-          <div className="flowers">
-            <Confetti gravity={0.2} numberOfPieces={300} />
           </div>
         </div>
       </div>

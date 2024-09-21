@@ -15,7 +15,7 @@ const CommonStyle = createGlobalStyle`
 
     /* Background image settings for responsiveness */
     background-image: url(${BGIMG});
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover; /* Image covers the entire section */
     background-position: center;
     background-attachment: fixed;
