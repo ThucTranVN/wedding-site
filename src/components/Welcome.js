@@ -90,13 +90,7 @@ const StyledWrapper = styled.section`
 `
 
 export default function Welcome() {
-  const { value, startTimer, stopTimer } = useTimer()
-  useEffect(() => {
-    startTimer()
-    return () => {
-      stopTimer()
-    }
-  }, [])
+  const { value } = useTimer();
   return (
     <StyledWrapper>
       <Title title="Welcome to attend our wedding party" /> 

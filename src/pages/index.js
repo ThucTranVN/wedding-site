@@ -1,33 +1,37 @@
-import React, { useState, useEffect } from 'react'
-import { graphql } from 'gatsby'
-import { Reset } from 'styled-reset'
-import FirstView from '../components/FirstView'
-import Couple from '../components/Couple'
-import Story from '../components/Story'
-import Wedding from '../components/Wedding'
-import Gallery from '../components/Gallery'
-import Welcome from '../components/Welcome'
-import CommonStyle from '../components/CommonStyle'
-import Footer from '../components/Footer'
-import Confetti from '../components/Confetti'
+import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
+import { Reset } from 'styled-reset';
+import FirstView from '../components/FirstView';
+import Couple from '../components/Couple';
+import Story from '../components/Story';
+import Wedding from '../components/Wedding';
+import Gallery from '../components/Gallery';
+import Welcome from '../components/Welcome';
+import CommonStyle from '../components/CommonStyle';
+import Footer from '../components/Footer';
+import Confetti from '../components/Confetti';
+import { LocationProvider } from '../components/LocationContext'; // Ensure proper import of LocationProvider
 
 export default function Index() {
-  const [ready, setReady] = useState(false)
-  const [dan, setDan] = useState(null)
+  const [ready, setReady] = useState(false);
+  const [dan, setDan] = useState(null);
 
   useEffect(() => {
     const inter = setTimeout(() => {
-      setReady(true)
-    }, 1000)
+      setReady(true);
+    }, 1000);
     return () => {
-      clearTimeout(inter)
-    }
-  }, [])
+      clearTimeout(inter);
+    };
+  }, []);
+
   const closeDan = () => {
-    setDan(null)
-  }
+    setDan(null);
+  };
+
   return (
-    <>
+    // Wrap the entire app inside LocationProvider to make the location value accessible in all components
+    <LocationProvider>
       <CommonStyle />
       <Reset />
       {dan && <Confetti dan={dan} closeDan={closeDan} />}
@@ -38,8 +42,8 @@ export default function Index() {
       <Wedding />
       <Welcome />
       <Footer />
-    </>
-  )
+    </LocationProvider>
+  );
 }
 
 export const pageQuery = graphql`
@@ -51,14 +55,14 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export function Head({ data }) {
-  const { title, description } = data.site.siteMetadata
+  const { title, description } = data.site.siteMetadata;
   return (
     <>
       <title>{title}</title>
       <meta name="description" content={description} />
     </>
-  )
+  );
 }

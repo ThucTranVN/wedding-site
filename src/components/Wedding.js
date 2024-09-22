@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from 'styled-components'
 import Title from './SectionTitle'
 import MapImg from '../assets/imgs/map.png'
+import LocationContext from './LocationContext'; // Import the LocationContext
 
 const WeddingImage = 'https://b1560601.tinifycdn.com/d8.png';
 
@@ -108,6 +109,32 @@ const StyledWrapper = styled.section`
   }
 `
 export default function Wedding() {
+
+  // Access the location from the LocationContext
+  const location = useContext(LocationContext);
+
+  // Define the details for different locations
+  const weddingDetails = {
+    sg: {
+      date: '10.11.2024 11:00 AM',
+      venue: 'Maison De Charme',
+      mapUrl: 'https://maps.app.goo.gl/B2PbiPWjK9LEcWxi9',
+    },
+    lt: {
+      date: '13.10.2024 11:00 AM',
+      venue: 'Thanh Khiet Restaurant',
+      mapUrl: 'https://maps.app.goo.gl/WManTnyTXW68uom87',
+    },
+    tn: {
+      date: '27.10.2024 11:00 AM',
+      venue: 'Sunrise Cana Restaurant',
+      mapUrl: 'https://maps.app.goo.gl/kdzokCpSpCmpKGqy8',
+    },
+  };
+
+  // Set default wedding details if location is not found
+  const { date, venue, mapUrl } = weddingDetails[location] || weddingDetails.sg;
+
   return (
     <StyledWrapper>
       <Title title="Event venue" />
@@ -117,15 +144,15 @@ export default function Wedding() {
           <ul className="items">
             <li className="item">
               <span className="label">Time</span>
-              <span className="txt">10.11.2024 11:00</span>
+              <span className="txt">{date}</span>
             </li>
             <li className="item">
               <span className="label">Location</span>
-              <span className="txt">Maison De Charme</span>
+              <span className="txt">{venue}</span>
             </li>
             <li className="item">
               <div className="txt loc">
-                  <a className="map" href={'https://maps.app.goo.gl/B2PbiPWjK9LEcWxi9'} target='_blank'>
+                  <a className="map" href={mapUrl} target='_blank'>
                     <img src={MapImg} alt="map" />
                   </a>
                 </div>

@@ -128,52 +128,47 @@ const StyledWrapper = styled.section`
 // initialTime: initCountNum,
 // const initCountNum = 3000;
 export default function FirstView() {
-  const { startTimer, stopTimer, value } = useTimer()
-  const [size, setSize] = useState(null)
-  const container = useRef(null)
-  const el = useRef(null)
-  // Create reference to store the Typed instance itself
-  const typed = useRef(null)
+  const { value } = useTimer(); // useTimer now gets initTime based on location context
+  const [size, setSize] = useState(null);
+  const container = useRef(null);
+  const el = useRef(null);
+  const typed = useRef(null);
+
   useEffect(() => {
-    if (container) {
+    // Check if the container reference is attached before accessing getComputedStyle
+    if (container.current) {
       setTimeout(() => {
-        const { width, height } = getComputedStyle(container.current)
-        setSize({ width, height })
-      }, 500)
+        const { width, height } = getComputedStyle(container.current);
+        setSize({ width, height });
+      }, 500);
     }
-    startTimer()
-    return () => {
-      stopTimer()
-    }
-  }, [])
+  }, [container]); // Add container to the dependencies to make sure it's initialized
+
   useEffect(() => {
-    // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, {
       strings: [
         'We <strong>met</strong>',
         'We <strong>got</strong> each other',
         'We <strong>fell in love</strong>',
-        'We <strong>got married</strong>!'
+        'We <strong>got married</strong>!',
       ],
       typeSpeed: 200,
       backSpeed: 50,
       backDelay: 1000,
-      loop: true
-    })
+      loop: true,
+    });
 
     return () => {
-      // Make sure to destroy Typed instance during cleanup
-      // to prevent memory leaks
-      typed.current.destroy()
-    }
-  }, [])
+      typed.current.destroy();
+    };
+  }, []);
+
   return (
     <StyledWrapper ref={container}>
       {size && (
         <Confetti
           width={size.width}
           height={size.height}
-          className="mask"
           recycle={true}
           numberOfPieces={99}
           wind={0.01}
@@ -190,7 +185,7 @@ export default function FirstView() {
           <div className="date">
             <div className="countdown">
               <span className="num day">
-                {value.day} days<br/>{value.hour} hours<br/>{value.minute} minutes<br/>{value.second} seconds
+                {value.day} days<br />{value.hour} hours<br />{value.minute} minutes<br />{value.second} seconds
               </span>
             </div>
             <div className="time">10.11.2024</div>
@@ -199,5 +194,5 @@ export default function FirstView() {
       </div>
       <HiChevronDoubleDown className="down" />
     </StyledWrapper>
-  )
+  );
 }
