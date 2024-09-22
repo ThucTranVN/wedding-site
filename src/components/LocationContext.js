@@ -27,7 +27,7 @@ export const LocationProvider = ({ children }) => {
 
       // Initialize Remote Config and set minimum fetch interval
       const remoteConfig = getRemoteConfig(app);
-      remoteConfig.settings.minimumFetchIntervalMillis = 0; // 1 hour
+      remoteConfig.settings.minimumFetchIntervalMillis = 36000; // 1 hour
 
       // Fetch remote config and set location
       fetchAndActivate(remoteConfig)
@@ -52,7 +52,12 @@ export const LocationProvider = ({ children }) => {
 
   if (!isInitialized) {
     // Display a loading state while Firebase is initializing and location is being fetched
-    return <div>Loading...</div>;
+    return <div class="wrapper">
+    <div class="dot"></div>
+    <span class="text">
+      Loading
+    </span>
+  </div>
   }
 
   return (
