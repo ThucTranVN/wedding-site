@@ -77,7 +77,7 @@ const StyledWrapper = styled.section`
       }
 
       .intro {
-        font-size: 0.16rem;
+        font-size: 0.14rem;
         white-space: nowrap;
       }
     }

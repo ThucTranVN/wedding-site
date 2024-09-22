@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { HiChevronDoubleDown } from 'react-icons/hi'
 import Confetti from 'confetti-react'
 import Typed from 'typed.js'
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
+import LocationContext from './LocationContext'; // Import the LocationContext
 
 const BGImg = 'https://b1560601.tinifycdn.com/w2.png'
 
@@ -134,6 +135,25 @@ export default function FirstView() {
   const el = useRef(null);
   const typed = useRef(null);
 
+    // Access the location from the LocationContext
+    const location = useContext(LocationContext);
+
+      // Define the details for different locations
+  const weddingDetails = {
+    sg: {
+      date: '10.11.2024'
+    },
+    lt: {
+      date: '13.10.2024'
+    },
+    tn: {
+      date: '27.10.2024'
+    },
+  };
+
+    // Set default wedding details if location is not found
+    const {date} = weddingDetails[location] || weddingDetails.sg;
+
   useEffect(() => {
     // Check if the container reference is attached before accessing getComputedStyle
     if (container.current) {
@@ -188,7 +208,7 @@ export default function FirstView() {
                 {value.day} days<br />{value.hour} hours<br />{value.minute} minutes<br />{value.second} seconds
               </span>
             </div>
-            <div className="time">10.11.2024</div>
+            <div className="time">{date}</div>
           </div>
         </div>
       </div>
