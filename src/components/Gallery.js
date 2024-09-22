@@ -93,8 +93,9 @@ const StyledWrapper = styled.section`
 
 const weddings = Array.from(Array(36).keys())
   .map((v, idx) => `w${idx + 1}`)
-const dailys = Array.from(Array(11).keys())
+const dailys = Array.from(Array(82).keys())
   .map((v, idx) => `d${idx + 1}`)
+  .filter((p) => !['d13', 'd14', 'd15', 'd16', 'd21','d17', 'd18','d19', 'd28', 'd29','d36', 'd40', 'd43', 'd44', 'd45', 'd46', 'd47', 'd48', 'd50','d52','d56','d57', 'd60','d61','d62','d63','d65','d68','d70', 'd66','d72','d80','d78'].includes(p))
 // console.log({ weddings })
 const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   const viewCount = useRef(0)
@@ -113,7 +114,7 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   }
   const handleLgClose = () => {
     // console.log('lg close')
-    if (viewCount.current >= 20) {
+    if (viewCount.current >= 30) {
       popupDan('Our sweet memories')
     }
   }
@@ -148,10 +149,10 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
           key={photo}
           className="picture"
           data-sub-html={`<h4>${title[cate]}</h4>`}
-          data-src={`https://fifth-furtive-hoverfly.glitch.me/images/${photo}.png`}
+          data-src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
         >
           <img
-            src={`https://fifth-furtive-hoverfly.glitch.me/images/${photo}.png`}
+            src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
           />
         </div>
         )

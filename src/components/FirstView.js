@@ -7,7 +7,7 @@ import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 import LocationContext from './LocationContext'; // Import the LocationContext
 
-const BGImg = 'https://b1560601.tinifycdn.com/w2.png'
+const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.png'
 
 const AniDown = keyframes`
     from{

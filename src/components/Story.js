@@ -153,7 +153,7 @@ const StyledWrapper = styled.section`
 `;
 
 const prefix =
-  'https://b1560601.tinifycdn.com'
+  'https://alike-pine-brand.glitch.me/images/'
 const items = [
   {
     title: 'Encounter: Luck casts a spell',
