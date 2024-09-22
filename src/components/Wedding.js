@@ -122,7 +122,7 @@ export default function Wedding() {
     },
     lt: {
       date: '13.10.2024 11:00 AM',
-      venue: 'Thanh Khiet Restaurant',
+      venue: 'Thanh Khiet Wedding Restaurant',
       mapUrl: 'https://maps.app.goo.gl/WManTnyTXW68uom87',
     },
     tn: {
