@@ -36,7 +36,7 @@ const StyledWrapper = styled.section`
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          border: 1px solid #eef;
+          border: 2px solid #222;
           padding: 0.2rem;
           border-radius: 0.12rem;
           width: 4rem;
@@ -182,11 +182,11 @@ const items = [
     <span>Throughout our time together, we found something far greater: we found friendship.</span>
     <span>When really, all alone, we simply enjoy each other’s company so much. We could not stay away from one another.</span>
     <span>I have never been a man enjoy flirting, or chatting, or, indeed, talking at all. But with her, conversation has always been easy.</span>
-    <span>Your laughter brings me joy. To meet a beautiful girl is one thing, but to meet your best friend in the most beautiful girl is something entirely apart.</span>
+    <span>Her laughter brings me joy. To meet a beautiful girl is one thing, but to meet your best friend in the most beautiful girl is something entirely apart.</span>
     <span>I understand that friendship is the best possible foundation a marriage can have.</span>
     <span>In my heart, we've been married for a long time, and this has been our daily routine.</span>
     <span>We will be more devoted to one another in the future and will meticulously preserve this relationship.</span>
-    <span>Share both joys and challenges, collaborate, and strive diligently for our glorious future!.</span>`,
+    <span>Share both joys and challenges, collaborate, and strive diligently for our glorious future!</span>`,
     picture: `${prefix}/story/s3.jpg`
   }
 ]

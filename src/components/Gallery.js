@@ -9,8 +9,8 @@ import 'lightgallery/css/lg-transitions.css'
 // import plugins if you need
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
 import lgZoom from 'lightgallery/plugins/zoom'
-
 import Title from './SectionTitle'
+
 const Loading = styled.div`
   font-size: 0.24rem;
   padding: 0.4rem 0.2rem;
@@ -93,12 +93,8 @@ const StyledWrapper = styled.section`
 
 const weddings = Array.from(Array(30).keys())
   .map((v, idx) => `w${idx + 1}`)
-  .filter(
-    (p) => !['w1','w2','w3'].includes(p)
-  )
-const dailys = Array.from(Array(9).keys())
+const dailys = Array.from(Array(10).keys())
   .map((v, idx) => `d${idx + 1}`)
-  .filter((p) => !['d1', 'd2','d3'].includes(p))
 // console.log({ weddings })
 const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   const viewCount = useRef(0)
@@ -151,10 +147,10 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
           key={photo}
           className="picture"
           data-sub-html={`<h4>${title[cate]}</h4>`}
-          data-src={`https://fifth-furtive-hoverfly.glitch.me/images/${photo}.png`}
+          data-src={`https://b1560601.tinifycdn.com/${photo}.png`}
         >
           <img
-            src={`https://fifth-furtive-hoverfly.glitch.me/images/${photo}.png`}
+            src={`https://b1560601.tinifycdn.com/${photo}.png`}
           />
         </div>
         )

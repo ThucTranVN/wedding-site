@@ -57,9 +57,9 @@ const StyledWrapper = styled.section`
           background-image: url(${AIu}), url(${FrameImage});
         }
         &.girl {
-          background-size: 70%;
-          background-position-x: 45%;
-          background-position-y: 62%;
+          background-size: 71%;
+          background-position-x: 47%;
+          background-position-y: 80%;
           background-image: url(${EIu}), url(${FrameImage});
         }
 
@@ -119,15 +119,20 @@ export default function Couple({ popupDan }) {
     }
   }, []);
 
-  const handleDC = () => {
-    popupDan('Bride · Groom')
+  const handleBridge = () => {
+    popupDan('Bride')
   }
+
+  const handleGroom = () => {
+    popupDan('Groom')
+  }
+
   return (
     <StyledWrapper>
       <Title title="Bride · Groom" />
       <div className="cp">
       <div className="profile">
-          <div className="pic girl" onDoubleClick={handleDC}>
+          <div className="pic girl" onDoubleClick={handleBridge}>
             <img src={FrameImage} alt="Bride" />
           </div>
           <div className="name">Phương Thảo👰🏻</div>
@@ -136,7 +141,7 @@ export default function Couple({ popupDan }) {
           </div>
         </div>
         <div className="profile">
-          <div className="pic boy" onDoubleClick={handleDC}>
+          <div className="pic boy" onDoubleClick={handleGroom}>
             <img src={FrameImage} alt="Groom" />
           </div>
           <div className="name">Kiến Thức🤵🏻</div>

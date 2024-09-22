@@ -54,7 +54,7 @@ const StyledPopup = styled.section`
     width: 5rem;
     z-index: 9;
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     margin-left: -2.5rem;
     padding: 0.4rem 0.3rem;
@@ -114,11 +114,14 @@ export default function Celebrate({ closeDan, dan = 'Super long memory egg' }) {
       // elRef refers to the <span> rendered below
       typed.current = new Typed(el.current, {
         strings: [
-          `<p>So awesome!!! </p>
-          <p>You found an "Easter egg": <strong>${dan}</strong>, take a screenshot to save it, now continue searching to get enough <strong>two "Easter eggs"</strong>, then send the screenshot to the groom 🤵🏻 to exchange for a small gift that we have prepared </p>
-          <p>For 10 lucky people. </p>`
+          `<span>So awesome!!! </span><br><br>
+          <span>You found an "Easter egg": <strong>${dan}</strong></span><br><br>
+          <span>Take a screenshot to save it. </span><br><br>
+          <span>Now continue searching to get enough three more</span><br><br>
+          <span>Then send the screenshot to the groom 🤵🏻 </span><br><br>
+          <span>To exchange for a small gift that we have prepared.</span>`
         ],
-        typeSpeed: 30,
+        typeSpeed: 50,
         showCursor: false
       })
     }
@@ -135,9 +138,10 @@ export default function Celebrate({ closeDan, dan = 'Super long memory egg' }) {
     <StyledPopup>
       <Confetti gravity={0.2} numberOfPieces={200} />
       <div className="tip">
-        <h3 className="title">🎉🎉🎉Congratulations!🎉🎉🎉</h3>
+        <h3 className="title">🎉🎉🎉 Congratulations 🎉🎉🎉</h3>
         <div className="content" ref={el}></div>
-        <div className="ps">* Keep it a secret, my dear friend</div>
+        <div className="ps">* Only for 10 lucky people.</div>
+        <div className="ps">* Please keep it a secret, my dear friend.</div>
         <div className="close" onClick={closeDan}>
           <MdClose color="#fff" />
         </div>
