@@ -8,7 +8,7 @@ const StyledTitle = styled.h2`
   width: 100%;
   text-align: center;
   font-size: 0.4rem;
-  margin: 0.4rem 0;
+  margin: 1rem 0;
   color: #222;
   font-weight: 800;
   &:after {

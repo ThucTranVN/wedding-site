@@ -153,7 +153,7 @@ export default function FirstView() {
         'We <strong>met</strong>',
         'We <strong>got</strong> each other',
         'We <strong>fell in love</strong>',
-        'We <strong>got</strong> married!'
+        'We <strong>got married</strong>!'
       ],
       typeSpeed: 200,
       backSpeed: 50,

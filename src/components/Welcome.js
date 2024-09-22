@@ -99,7 +99,7 @@ export default function Welcome() {
   }, [])
   return (
     <StyledWrapper>
-      <Title title="Welcome to attend our wedding party" />
+      <Title title="Welcome to attend our wedding party" /> 
       <div className="wrapper">
       <Confetti gravity={0.2} numberOfPieces={100} />
         <div className="countdown">

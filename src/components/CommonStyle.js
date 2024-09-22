@@ -7,6 +7,7 @@ const CommonStyle = createGlobalStyle`
      font-size: 100px;
  }
  html,body{
+    scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: scroll;
     &::-webkit-scrollbar{

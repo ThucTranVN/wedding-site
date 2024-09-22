@@ -88,7 +88,7 @@ const StyledWrapper = styled.section`
 
           img {
             z-index: 8;
-            border-radius: 30%;
+            border-radius: 50%;
             border: 2px solid #222;
             width: 2rem;
             height: 2rem;

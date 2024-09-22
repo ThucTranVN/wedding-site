@@ -43,7 +43,6 @@ const StyledWrapper = styled.section`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-right: 0.4rem;
 
       .pic {
         width: 3rem;
@@ -78,7 +77,7 @@ const StyledWrapper = styled.section`
       }
 
       .intro {
-        font-size: 0.12rem;
+        font-size: 0.16rem;
         white-space: nowrap;
       }
     }
