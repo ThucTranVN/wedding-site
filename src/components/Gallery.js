@@ -91,9 +91,9 @@ const StyledWrapper = styled.section`
   }
 `
 
-const weddings = Array.from(Array(30).keys())
+const weddings = Array.from(Array(36).keys())
   .map((v, idx) => `w${idx + 1}`)
-const dailys = Array.from(Array(10).keys())
+const dailys = Array.from(Array(11).keys())
   .map((v, idx) => `d${idx + 1}`)
 // console.log({ weddings })
 const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
