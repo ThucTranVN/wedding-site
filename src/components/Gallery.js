@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import LightGallery from 'lightgallery/react'
+import LazyLoad from 'react-lazyload'
 import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-zoom.css'
 import 'lightgallery/css/lg-thumbnail.css'
@@ -143,20 +144,21 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
       plugins={[lgThumbnail, lgZoom]}
 
     >
-      {photos.map((photo) => {
-        return (
-          <div
+      {photos.map((photo) => (
+        <div
           key={photo}
           className="picture"
           data-sub-html={`<h4>${title[cate]}</h4>`}
           data-src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
         >
-          <img
-            src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
-          />
+          <LazyLoad height={200} offset={100} once>
+            <img
+              src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
+              alt={photo}
+            />
+          </LazyLoad>
         </div>
-        )
-      })}
+      ))}
     </LightGallery>
   )
 }
