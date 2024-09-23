@@ -131,35 +131,35 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
       clearTimeout(inter)
     }
   }, [photos])
+
   return reiniting ? (
     <Loading>Loading...</Loading>
   ) : (
-    <LightGallery
-      onAfterClose={handleLgClose}
-      onAfterOpen={handleLgOpen}
-      onAfterSlide={handleSlideAfter}
-      mode={cate == 'wedding' ? 'lg-zoom-in-big' : 'lg-slide-vertical-growth'}
-      onInit={onInit}
-      speed={500}
-      plugins={[lgThumbnail, lgZoom]}
-
-    >
-      {photos.map((photo) => (
-        <div
-          key={photo}
-          className="picture"
-          data-sub-html={`<h4>${title[cate]}</h4>`}
-          data-src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
-        >
-          <LazyLoad height={200} offset={100} once>
-            <img
-              src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
-              alt={photo}
-            />
-          </LazyLoad>
-        </div>
-      ))}
-    </LightGallery>
+    <LazyLoad>
+      <LightGallery
+        onAfterClose={handleLgClose}
+        onAfterOpen={handleLgOpen}
+        onAfterSlide={handleSlideAfter}
+        mode={cate == 'wedding' ? 'lg-zoom-in-big' : 'lg-slide-vertical-growth'}
+        onInit={onInit}
+        speed={500}
+        plugins={[lgThumbnail, lgZoom]}
+      >
+        {photos.map((photo) => (
+          <div
+            key={photo}
+            className="picture"
+            data-sub-html={`<h4>${title[cate]}</h4>`}
+            data-src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
+          >
+              <img
+                src={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
+                alt={photo}
+              />
+          </div>
+        ))}
+      </LightGallery>
+    </LazyLoad>
   )
 }
 export default function Gallery({ popupDan }) {

@@ -11,6 +11,7 @@ import CommonStyle from '../components/CommonStyle';
 import Footer from '../components/Footer';
 import Confetti from '../components/Confetti';
 import { LocationProvider } from '../components/LocationContext'; // Ensure proper import of LocationProvider
+import LazyLoad from 'react-lazyload'
 
 export default function Index() {
   const [ready, setReady] = useState(false);
@@ -32,16 +33,18 @@ export default function Index() {
   return (
     // Wrap the entire app inside LocationProvider to make the location value accessible in all components
     <LocationProvider>
-      <CommonStyle />
-      <Reset />
-      {dan && <Confetti dan={dan} closeDan={closeDan} />}
-      <FirstView />
-      <Couple popupDan={setDan} />
-      <Story />
-      {ready && <Gallery popupDan={setDan} />}
-      <Wedding />
-      <Welcome />
-      <Footer />
+      <LazyLoad>
+        <CommonStyle />
+        <Reset />
+        {dan && <Confetti dan={dan} closeDan={closeDan} />}
+        <FirstView />
+        <Couple popupDan={setDan} />
+        <Story />
+        {ready && <Gallery popupDan={setDan} />}
+        <Wedding />
+        <Welcome />
+        <Footer />
+      </LazyLoad>
     </LocationProvider>
   );
 }

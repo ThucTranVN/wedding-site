@@ -1,24 +1,12 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
-import styled, { keyframes } from 'styled-components'
-import { HiChevronDoubleDown } from 'react-icons/hi'
+import styled from 'styled-components'
 import Confetti from 'confetti-react'
 import Typed from 'typed.js'
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 import LocationContext from './LocationContext'; // Import the LocationContext
-
 const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.png'
 
-const AniDown = keyframes`
-    from{
-        transform:translateY(-10px);
-        opacity:.1;
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-`
 const StyledWrapper = styled.section`
   background-color: #fff;
 
@@ -37,7 +25,6 @@ const StyledWrapper = styled.section`
     background-repeat: no-repeat;
     background-size: cover; /* Image covers the entire section */
     background-position-y: 50%;
-    background-attachment: fixed;
 
     @media screen and (max-width: 1024px) {
       background-size: contain; /* Contain image for smaller screens */
@@ -113,16 +100,6 @@ const StyledWrapper = styled.section`
         }
       }
     }
-  }
-
-  .down {
-    position: absolute;
-    width: 0.44rem;
-    left: 50%;
-    bottom: 0.1rem;
-    margin-left: -0.22rem;
-    animation-direction: alternate-reverse;
-    animation: ${AniDown} 1s infinite;
   }
 `;
 
@@ -212,7 +189,6 @@ export default function FirstView() {
           </div>
         </div>
       </div>
-      <HiChevronDoubleDown className="down" />
     </StyledWrapper>
   );
 }

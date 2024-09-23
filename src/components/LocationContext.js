@@ -52,12 +52,7 @@ export const LocationProvider = ({ children }) => {
 
   if (!isInitialized) {
     // Display a loading state while Firebase is initializing and location is being fetched
-    return <div class="wrapper">
-    <div class="dot"></div>
-    <span class="text">
-      Loading
-    </span>
-  </div>
+    return <div> </div>
   }
 
   return (

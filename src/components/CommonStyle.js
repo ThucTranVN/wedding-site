@@ -1,55 +1,61 @@
-import { createGlobalStyle } from 'styled-components'
-import AutumnInNovemberFont from '../assets/font/Autumn-In-November.ttf'
-import BGIMG from '../assets/imgs/welcome-bg.png'
+import { createGlobalStyle } from 'styled-components';
+import AutumnInNovemberFont from '../assets/font/Autumn-In-November.ttf';
+import BGIMG from '../assets/imgs/welcome-bg.png';
 
 const CommonStyle = createGlobalStyle`
- html{
+ html {
      font-size: 100px;
  }
- html,body{
+ 
+ html, body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    //overflow-x: hidden;
 
-    /* Background image settings for responsiveness */
+    /* Avoid forcing scroll bars to be visible at all times */
+    //overflow-y: auto;
+    
+    /* Remove custom scrollbar to avoid layout reflows */
+    /* &::-webkit-scrollbar { 
+        display: none; 
+    } */
+
+    /* Background image settings */
     background-image: url(${BGIMG});
     background-repeat: repeat;
     background-size: cover; /* Image covers the entire section */
     background-position: center;
-    background-attachment: fixed;
  }
+
  @media screen and (min-width: 1681px) {
     html {
-        font-size:120px
+        font-size: 120px;
     }
-}
+ }
+ 
  @media screen and (max-width: 1680px) {
     html {
-        font-size:100px
+        font-size: 100px;
     }
-}
+ }
 
-@media screen and (max-width: 736px) {
+ @media screen and (max-width: 736px) {
     html {
-        font-size:80px
+        font-size: 80px;
     }
-}
+ }
 
-@media screen and (max-width: 414px) {
+ @media screen and (max-width: 414px) {
     html {
-        font-size:60px
+        font-size: 60px;
     }
-}
+ }
 
-@font-face {
+ @font-face {
     font-family: "AutumnInNovember";
-    src: local("AutumnInNovember") url(${AutumnInNovemberFont}) format('truetype');
+    src: local("AutumnInNovember"), url(${AutumnInNovemberFont}) format('truetype');
     font-style: normal;
     font-weight: normal;
-  }
-`
+ }
+`;
 
-export default CommonStyle
+export default CommonStyle;
