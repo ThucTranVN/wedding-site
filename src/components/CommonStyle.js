@@ -14,6 +14,7 @@ const CommonStyle = createGlobalStyle`
 
     /* Remove custom scrollbar to avoid layout reflows */
     &::-webkit-scrollbar { 
+        width: 0;
         display: none; 
     } 
 

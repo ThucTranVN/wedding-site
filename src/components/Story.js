@@ -12,13 +12,6 @@ const AniBeating = keyframes`
 `
 const StyledWrapper = styled.section`
   width: 100%;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-
-  /* Remove custom scrollbar to avoid layout reflows */
-  &::-webkit-scrollbar { 
-      display: none; 
-  } 
 
   .tl {
     display: flex;
@@ -31,13 +24,26 @@ const StyledWrapper = styled.section`
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
+      -ms-overflow-style: none;  /* Internet Explorer 10+ */
+      scrollbar-width: none;  /* Firefox */
 
+      /* Remove custom scrollbar to avoid layout reflows */
+      &::-webkit-scrollbar { 
+          display: none; 
+      } 
       .item {
         display: flex;
         align-items: center;
         margin-bottom: 0.4rem;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
 
+        /* Remove custom scrollbar to avoid layout reflows */
+        &::-webkit-scrollbar { 
+            display: none; 
+        } 
         .content {
+
           position: relative;
           background-color: #fff;
           display: flex;
@@ -60,6 +66,13 @@ const StyledWrapper = styled.section`
           }
 
           .desc {
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+
+            /* Remove custom scrollbar to avoid layout reflows */
+            &::-webkit-scrollbar { 
+                display: none; 
+            } 
             height: 1.5rem;
             overflow: scroll;
             line-height: 1.5;

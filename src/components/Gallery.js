@@ -21,16 +21,16 @@ const StyledWrapper = styled.section`
   min-height: 50vh;
   width: 100%;
   max-width: 2200px;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-
-  /* Remove custom scrollbar to avoid layout reflows */
-  &::-webkit-scrollbar { 
-      display: none; 
-  } 
 
   margin: auto;
   .wrapper {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+
+    /* Remove custom scrollbar to avoid layout reflows */
+    &::-webkit-scrollbar { 
+        display: none; 
+    } 
     width: 100%;
     padding: 0;
     max-height: 80vh;
