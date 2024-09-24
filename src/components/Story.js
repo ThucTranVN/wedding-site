@@ -1,6 +1,19 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Title from './SectionTitle'
+import { HiChevronDoubleDown } from 'react-icons/hi'
+
+const AniDown = keyframes`
+    from{
+        transform:translateY(-10px);
+        opacity:.1;
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+`
+
 
 const AniBeating = keyframes`
     from{
@@ -170,6 +183,18 @@ const StyledWrapper = styled.section`
       }
     }
   }
+
+  .down {
+    position: relative;
+    width: 0.2rem;
+    height: 5vh;
+    padding-top: 20px;
+    left: 50%;  
+    margin-left: -0.22rem;
+    animation-direction: alternate-reverse;
+    animation: ${AniDown} 1s infinite;
+  }
+
 `;
 
 const prefix =
@@ -236,6 +261,7 @@ export default function Couple() {
                   className="desc"
                   dangerouslySetInnerHTML={createMarkup(desc)}
                 ></p>
+               {idx !== 0 && <HiChevronDoubleDown className="down" />}
               </div>
             </li>
           ))}
