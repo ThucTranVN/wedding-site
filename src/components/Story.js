@@ -12,6 +12,13 @@ const AniBeating = keyframes`
 `
 const StyledWrapper = styled.section`
   width: 100%;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
+  /* Remove custom scrollbar to avoid layout reflows */
+  &::-webkit-scrollbar { 
+      display: none; 
+  } 
 
   .tl {
     display: flex;

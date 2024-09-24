@@ -20,7 +20,14 @@ const Loading = styled.div`
 const StyledWrapper = styled.section`
   min-height: 50vh;
   width: 100%;
-  max-width: 1800px;
+  max-width: 2200px;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+
+  /* Remove custom scrollbar to avoid layout reflows */
+  &::-webkit-scrollbar { 
+      display: none; 
+  } 
 
   margin: auto;
   .wrapper {
