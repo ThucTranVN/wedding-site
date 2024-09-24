@@ -8,18 +8,17 @@ const WeddingImage = 'https://alike-pine-brand.glitch.me/images/d8.png';
 
 const StyledWrapper = styled.section`
   z-index: 1;
-  position: relative;
   width: 100%;
   margin: auto;
   padding: 0.3rem 0;
-  max-width: 1800px;
+  max-width: 2200px;
   background-color: #fff;
   background: url(${WeddingImage});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   .wrapper {
-    max-width: 1400px;
+    max-width: 2200px;
     margin: 0.2rem auto;
     display: flex;
     align-items: center;

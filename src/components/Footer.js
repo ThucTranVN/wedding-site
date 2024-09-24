@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Wrapper = styled.footer`
   width: 100%;
   max-width: 100%;
-  padding: 4rem 0 0.4rem 0;
+  padding: 0.3rem 0;
 
   text-align: center;
   .copyright,

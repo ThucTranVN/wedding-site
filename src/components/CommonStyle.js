@@ -9,15 +9,13 @@ const CommonStyle = createGlobalStyle`
  
  html, body {
     scroll-behavior: smooth;
-    //overflow-x: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 
-    /* Avoid forcing scroll bars to be visible at all times */
-    //overflow-y: auto;
-    
     /* Remove custom scrollbar to avoid layout reflows */
-    /* &::-webkit-scrollbar { 
+    &::-webkit-scrollbar { 
         display: none; 
-    } */
+    } 
 
     /* Background image settings */
     background-image: url(${BGIMG});
