@@ -34,7 +34,8 @@ const StyledWrapper = styled.section`
     width: 100%;
     padding: 0;
     max-height: 80vh;
-    overflow: scroll;
+    overflow: auto;
+    will-change: transform;
     .lg-react-element {
       column-count: 5;
       @media screen and (max-width: 1500px) {
