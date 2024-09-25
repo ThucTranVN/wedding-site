@@ -117,7 +117,7 @@ export default function Celebrate({ closeDan, dan = 'Super long memory egg' }) {
           `<span>So awesome!!! </span><br><br>
           <span>You found an "Easter egg": <strong>${dan}</strong></span><br><br>
           <span>Take a screenshot to save it. </span><br><br>
-          <span>Now continue searching to get enough three egg</span><br><br>
+          <span>Now continue searching to get enough three eggs</span><br><br>
           <span>Then send the screenshot to the groom 🤵🏻 </span><br><br>
           <span>To exchange for a small gift that we have prepared.</span>`
         ],
