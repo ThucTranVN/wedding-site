@@ -152,6 +152,11 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
         onInit={onInit}
         speed={500}
         plugins={[lgThumbnail, lgZoom]}
+        mobileSettings={{
+          controls: true,
+          showCloseButton: true,
+          download: false
+        }}
       >
         {photos.map((photo) => (
           <div
