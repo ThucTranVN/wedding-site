@@ -160,8 +160,9 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
             className="picture"
             data-sub-html={`<h4>${title[cate]}</h4>`}
             data-src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
+            data-src-fallback={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
           >
-              <img
+              <img fallback
                 src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
                 alt={photo}
               />
