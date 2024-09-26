@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import LightGallery from 'lightgallery/react'
-import LazyLoad from 'react-lazyload'
 import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-zoom.css'
 import 'lightgallery/css/lg-thumbnail.css'
@@ -142,7 +141,6 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   return reiniting ? (
     <Loading>Loading...</Loading>
   ) : (
-    <LazyLoad>
       <LightGallery
         onAfterClose={handleLgClose}
         onAfterOpen={handleLgOpen}
@@ -164,15 +162,13 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
             data-sub-html={`<h4>${title[cate]}</h4>`}
             data-src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
           >
-              <img
+              <img loading="lazy"
                 src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
                 alt={photo}
-                loading="lazy"
               />
           </div>
         ))}
       </LightGallery>
-    </LazyLoad>
   )
 }
 export default function Gallery({ popupDan }) {
