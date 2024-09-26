@@ -5,7 +5,7 @@ import Typed from 'typed.js'
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 import LocationContext from './LocationContext'; // Import the LocationContext
-const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.png'
+const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.webp'
 
 const StyledWrapper = styled.section`
   background-color: #fff;

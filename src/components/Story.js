@@ -179,7 +179,7 @@ const items = [
     title: 'Encounter: Luck casts a spell',
     datetime: '',
     desc: `<span>Our first meeting happens at a company party. Although it was our first contact, it felt like we had known each other for a long time. This familiar and surprising feeling made us get closer to each other little by little. </span>`,
-    picture: `${prefix}/story/s1.jpg`
+    picture: `${prefix}/story/s1.webp`
   },
   {
     title: 'Understanding: The meaning of love',
@@ -192,7 +192,7 @@ const items = [
     <span>It was inevitable that there would be discord in our lives when we were together.</span>
     <span>Fortunately, we have the ability to regain our composure and evaluate the situation in a timely manner, as well as to express our emotions and subsequently adapt to one another following each disagreement.</span>
     <span>A good personal connection is the outcome of getting along and interacting. We are willing to provide love and energy to one another, and we are always appreciative.</span>`,
-    picture: `${prefix}/story/s2.jpg`
+    picture: `${prefix}/story/s2.webp`
   },
   {
     title: 'Stay together: Peace of mind is where we belong',
@@ -207,7 +207,7 @@ const items = [
     <span>In my heart, we've been married for a long time, and this has been our daily routine.</span>
     <span>We will be more devoted to one another in the future and will meticulously preserve this relationship.</span>
     <span>Share both joys and challenges, collaborate, and strive diligently for our glorious future!</span>`,
-    picture: `${prefix}/story/s3.jpg`
+    picture: `${prefix}/story/s3.webp`
   }
 ]
 function createMarkup(html) {

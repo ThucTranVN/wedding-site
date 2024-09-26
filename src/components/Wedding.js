@@ -4,7 +4,7 @@ import Title from './SectionTitle'
 import MapImg from '../assets/imgs/map.png'
 import LocationContext from './LocationContext'; // Import the LocationContext
 
-const WeddingImage = 'https://alike-pine-brand.glitch.me/images/d8.png';
+const WeddingImage = 'https://alike-pine-brand.glitch.me/images/d8.webp';
 
 const StyledWrapper = styled.section`
   z-index: 1;
