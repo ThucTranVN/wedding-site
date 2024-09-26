@@ -7,7 +7,6 @@ import 'lightgallery/css/lg-thumbnail.css'
 import 'lightgallery/css/lg-transitions.css'
 
 // import plugins if you need
-import lgThumbnail from 'lightgallery/plugins/thumbnail'
 import lgZoom from 'lightgallery/plugins/zoom'
 import Title from './SectionTitle'
 
@@ -148,7 +147,7 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
         mode={cate == 'wedding' ? 'lg-zoom-in-big' : 'lg-slide-vertical-growth'}
         onInit={onInit}
         speed={500}
-        plugins={[lgThumbnail, lgZoom]}
+        plugins={[lgZoom]}
         mobileSettings={{
           controls: true,
           showCloseButton: true,
