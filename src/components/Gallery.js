@@ -161,7 +161,7 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
             data-sub-html={`<h4>${title[cate]}</h4>`}
             data-src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
           >
-              <img loading="lazy"
+              <img
                 src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
                 alt={photo}
               />
