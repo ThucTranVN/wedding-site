@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import LazyLoad from 'react-lazyload'
 import LightGallery from 'lightgallery/react'
 import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-zoom.css'
@@ -162,12 +161,10 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
             data-sub-html={`<h4>${title[cate]}</h4>`}
             data-src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
           >
-              <LazyLoad once>
               <img loading="lazy"
                 src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
                 alt={photo}
               />
-              </LazyLoad>
           </div>
         ))}
       </LightGallery>
