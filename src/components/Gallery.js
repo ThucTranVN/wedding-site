@@ -168,6 +168,7 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
             data-src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
           >
               <img 
+                loading="lazy"
                 src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
                 alt={photo}
               />
