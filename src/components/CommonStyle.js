@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import AutumnInNovemberFont from '../assets/font/Autumn-In-November.ttf';
-import BGIMG from '../assets/imgs/welcome-bg.png';
 
 const CommonStyle = createGlobalStyle`
  html {
@@ -18,11 +17,9 @@ const CommonStyle = createGlobalStyle`
         display: none; 
     } 
 
-    /* Background image settings */
-    background-image: url(${BGIMG});
-    background-repeat: repeat;
-    background-size: cover; /* Image covers the entire section */
-    background-position: center;
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  }
 
  @media screen and (min-width: 1681px) {

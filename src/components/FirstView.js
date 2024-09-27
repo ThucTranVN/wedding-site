@@ -5,7 +5,7 @@ import Typed from 'typed.js'
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 import LocationContext from './LocationContext'; // Import the LocationContext
-const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.webp'
+const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.jpg'
 
 const StyledWrapper = styled.section`
   background-color: #fff;
@@ -35,7 +35,6 @@ const StyledWrapper = styled.section`
     /* Shadow effect behind the background image */
     &:after {
       position: absolute;
-      content: '';
       width: 100%;  /* Cover the entire width */
       height: 100%; /* Cover the entire height */
       top: 0;

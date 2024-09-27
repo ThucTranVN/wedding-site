@@ -45,12 +45,14 @@ const StyledWrapper = styled.section`
       column-gap: 0.14rem;
       .picture {
         cursor: pointer;
-        max-width: 300px;
+        max-width: auto;
         margin: 0 auto 5px auto;
+        border: 5px;
         img {
-          border: 2px solid #ccc;
+          border: 3px solid #ccc;
           width: 100%;
           border: 5px;
+          border-radius: 5%;
         }
       }
     }
@@ -72,7 +74,9 @@ const StyledWrapper = styled.section`
     .group {
       display: flex;
       .btn {
-        background-color: #eee;
+        background: #EECDA3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         margin: 0;
         transition: all 0.6s ease-in-out;
         cursor: pointer;
@@ -100,8 +104,10 @@ const StyledWrapper = styled.section`
 
 const weddings = Array.from(Array(36).keys())
   .map((v, idx) => `w${idx + 1}`)
-const dailys = Array.from(Array(11).keys())
+const dailys = Array.from(Array(60).keys())
   .map((v, idx) => `d${idx + 1}`)
+  .filter((p) => !['d30', 'd36', 'd50', 'd51', 'd52','d53', 'd54','d55', 'd56', 'd57','d58', 'd59'].includes(p))
+
 // console.log({ weddings })
 const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
   const viewCount = useRef(0)
@@ -159,11 +165,10 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
             key={photo}
             className="picture"
             data-sub-html={`<h4>${title[cate]}</h4>`}
-            data-src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
-            data-src-fallback={`https://alike-pine-brand.glitch.me/images/${photo}.png`}
+            data-src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
           >
-              <img fallback
-                src={`https://alike-pine-brand.glitch.me/images/${photo}.webp`}
+              <img 
+                src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
                 alt={photo}
               />
           </div>

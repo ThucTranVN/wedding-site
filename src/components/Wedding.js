@@ -1,10 +1,9 @@
 import React, {useContext} from 'react'
 import styled from 'styled-components'
 import Title from './SectionTitle'
-import MapImg from '../assets/imgs/map.png'
 import LocationContext from './LocationContext'; // Import the LocationContext
 
-const WeddingImage = 'https://alike-pine-brand.glitch.me/images/d8.webp';
+const WeddingImage = 'https://alike-pine-brand.glitch.me/images/d8.jpg';
 
 const StyledWrapper = styled.section`
   z-index: 1;
@@ -12,6 +11,7 @@ const StyledWrapper = styled.section`
   margin: auto;
   padding: 0.3rem 0;
   max-width: 2200px;
+  height: 100vh;
   background-color: #fff;
   background: url(${WeddingImage});
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ const StyledWrapper = styled.section`
   background-position: center;
   .wrapper {
     max-width: 2200px;
-    margin: 0.2rem auto;
+    margin: 2rem auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -27,7 +27,7 @@ const StyledWrapper = styled.section`
       flex-direction: column;
     }
     .box {
-      min-height: 4.4rem;
+      min-height: 2rem;
       width: 4rem;
       background-color: rgba(2, 2, 2, 0.5);
       z-index: 9;
@@ -136,7 +136,6 @@ export default function Wedding() {
 
   return (
     <StyledWrapper>
-      <Title title="Event venue" />
       <div className="wrapper">
         <div className="box">
           <h3 className="title">Wedding Party</h3>
@@ -147,14 +146,7 @@ export default function Wedding() {
             </li>
             <li className="item">
               <span className="label">Location</span>
-              <span className="txt">{venue}</span>
-            </li>
-            <li className="item">
-              <div className="txt loc">
-                  <a className="map" href={mapUrl} target='_blank'>
-                    <img src={MapImg} alt="map" />
-                  </a>
-                </div>
+              <a href={mapUrl} target='_blank'> <span className="txt">{venue}</span></a>
             </li>
           </ul>
         </div>
