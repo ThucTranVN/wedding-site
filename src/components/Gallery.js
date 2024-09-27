@@ -19,7 +19,6 @@ const StyledWrapper = styled.section`
   min-height: 50vh;
   width: 100%;
   max-width: 2200px;
-
   margin: auto;
   .wrapper {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -31,7 +30,7 @@ const StyledWrapper = styled.section`
     } 
     width: 100%;
     padding: 0;
-    max-height: 80vh;
+    max-height: 100vh;
     overflow: auto;
     will-change: transform;
     .lg-react-element {

@@ -17,6 +17,11 @@ const StyledWrapper = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
   .wrapper {
     max-width: 2200px;
     margin: 2rem auto;
