@@ -12,8 +12,9 @@ const StyledWrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    height: 30vh;
     .countdown {
+      margin-bottom: 10%;
       width: 100%;
       opacity: 0.8;
       padding: 0.3rem 0;

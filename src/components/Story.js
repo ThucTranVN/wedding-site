@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Title from './SectionTitle'
+import LoveStoryIcon from '../assets/imgs/love-story.png';
 
 const AniBeating = keyframes`
     from{
@@ -135,9 +136,9 @@ const StyledWrapper = styled.section`
         @media screen and (min-width: 415px) and (max-height: 600px) {
           flex-direction: row;
 
-          .heart {
-            margin: 0 0.2rem;
-          }
+          // .heart {
+          //   margin: 0 0.2rem;
+          // }
 
           &:nth-child(even) {
             flex-direction: row-reverse;
@@ -149,7 +150,10 @@ const StyledWrapper = styled.section`
           flex-direction: column-reverse;
 
           .heart {
-            margin: 0.2rem 0;
+          width: 0.6rem; /* Match the font-size */
+          height: 0.6rem; /* Match the font-size */
+          margin-top: 0.5rem; /* Add spacing between icon and name */
+          margin-bottom: 0.5rem; /* Add spacing between icon and name */
           }
 
           &:nth-child(even) {
@@ -162,7 +166,11 @@ const StyledWrapper = styled.section`
           flex-direction: row;
 
           .heart {
-            margin: 0 0.2rem;
+          margin: 0 0.2rem;
+          width: 0.4rem; /* Match the font-size */
+          height: 0.4rem; /* Match the font-size */
+          margin-right: 0.5rem; /* Add spacing between icon and name */
+          margin-left: 0.5rem; /* Add spacing between icon and name */
           }
 
           &:nth-child(even) {
@@ -227,7 +235,7 @@ export default function Couple() {
               <div className="pic">
                 <img src={picture} alt="picture" />
               </div>
-              <i className="heart">💓</i>
+              <img className="heart" src={LoveStoryIcon} alt="Love Story Icon" />
               <div
                 className="content"
                 style={{ animationDelay: `0.${idx * 5}s` }}

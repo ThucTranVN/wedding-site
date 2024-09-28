@@ -4,6 +4,8 @@ import Title from './SectionTitle'
 import FrameImage from '../assets/imgs/frame-removebg.png'
 import EIu from '../assets/imgs/eiu.png'
 import AIu from '../assets/imgs/aiu.png'
+import BrideIcon from '../assets/imgs/bride.png';  // Custom bride icon
+import GroomIcon from '../assets/imgs/groom.png';  // Custom groom icon
 
 const StyledWrapper = styled.section`
   width: 100%;
@@ -76,6 +78,14 @@ const StyledWrapper = styled.section`
         margin: 0.2rem 0;
       }
 
+      /* Custom bride and groom icons */
+      .icon {
+        width: 0.4rem; /* Match the font-size */
+        height: 0.4rem; /* Match the font-size */
+        margin-right: 0.1rem; /* Add spacing between icon and name */
+        padding-top: 0.1rem; /* Add spacing between icon and name */
+      }
+
       .intro {
         font-size: 0.14rem;
         white-space: nowrap;
@@ -135,7 +145,9 @@ export default function Couple({ popupDan }) {
           <div className="pic girl" onDoubleClick={handleBridge}>
             <img src={FrameImage} alt="Bride" />
           </div>
-          <div className="name">Phương Thảo👰🏻</div>
+          <div className="name">
+            <img className="icon" src={BrideIcon} alt="Bride Icon" />Phương Thảo <img className="icon" src={BrideIcon} alt="Bride Icon" />
+          </div>
           <div className="intro">
           There are three things I cannot live without: water, air, and that man on the {tips[pos].w}
           </div>
@@ -144,7 +156,7 @@ export default function Couple({ popupDan }) {
           <div className="pic boy" onDoubleClick={handleGroom}>
             <img src={FrameImage} alt="Groom" />
           </div>
-          <div className="name">Kiến Thức🤵🏻</div>
+          <div className="name"><img className="icon" src={GroomIcon} alt="Groom Icon" />Kiến Thức <img className="icon" src={GroomIcon} alt="Groom Icon" /></div>
           <div className="intro">
           There are three things I cannot live without: water, air, and that woman on the {tips[pos].m}
           </div>

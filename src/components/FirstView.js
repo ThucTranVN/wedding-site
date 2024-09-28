@@ -1,11 +1,25 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Confetti from 'confetti-react'
 import Typed from 'typed.js'
 import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 import LocationContext from './LocationContext'; // Import the LocationContext
+import { HiChevronDoubleDown } from 'react-icons/hi'
+
 const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.jpg'
+
+const AniDown = keyframes`
+    from{
+        transform:translateY(-10px);
+        opacity:.1;
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+`
+
 
 const StyledWrapper = styled.section`
   background-color: #fff;
@@ -66,7 +80,7 @@ const StyledWrapper = styled.section`
       .title {
         font-family: 'AutumnInNovember';
         display: flex;
-        font-size: 0.48rem;
+        font-size: 0.3rem;
         padding: 0.2rem 0;
         margin-bottom: 0.2rem;
 
@@ -100,6 +114,17 @@ const StyledWrapper = styled.section`
       }
     }
   }
+
+  .down {
+    position: absolute;
+    width: 0.44rem;
+    left: 50%;
+    bottom: 0.1rem;
+    margin-left: -0.22rem;
+    animation-direction: alternate-reverse;
+    animation: ${AniDown} 1s infinite;
+  }
+
 `;
 
 // initialTime: initCountNum,
@@ -144,7 +169,6 @@ export default function FirstView() {
     typed.current = new Typed(el.current, {
       strings: [
         'We <strong>met</strong>',
-        'We <strong>got</strong> each other',
         'We <strong>fell in love</strong>',
         'We <strong>got married</strong>!',
       ],
@@ -188,6 +212,7 @@ export default function FirstView() {
           </div>
         </div>
       </div>
+      <HiChevronDoubleDown className="down" />
     </StyledWrapper>
   );
 }

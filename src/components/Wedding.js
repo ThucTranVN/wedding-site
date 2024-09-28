@@ -17,20 +17,25 @@ const StyledWrapper = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  
   a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
   .wrapper {
     max-width: 2200px;
     margin: 2rem auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
+
     @media screen and (max-width: 768px) {
       flex-direction: column;
     }
+
     .box {
       min-height: 2rem;
       width: 4rem;
@@ -43,16 +48,20 @@ const StyledWrapper = styled.section`
       align-items: center;
       justify-content: flex-start;
       font-size: 0.2rem;
-      border-radius: 5px;
-      /* border: 2px solid rgba(2,2,2,.5); */
-      &:first-child {
-        margin: 0 0.25rem 0 0;
-      }
+      border-radius: 20px;
+      top: 50px;
+      /* Default position for larger screens */
+      position: relative;
+
       @media screen and (max-width: 768px) {
-        &:first-child {
-          margin: 0 0 0.25rem 0;
-        }
+        /* Move the box to the top for mobile devices */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: -2.5rem; /* Adjust margin for spacing if needed */
+        flex-direction: column;
       }
+
       .title {
         font-size: 0.3rem;
         width: 100%;
@@ -60,12 +69,14 @@ const StyledWrapper = styled.section`
         border-bottom: 1px solid rgba(222, 222, 222, 0.4);
         padding-bottom: 0.2rem;
       }
+
       .items {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0.2rem 0;
+
         .item {
           font-size: 0.22rem;
           display: flex;
@@ -75,34 +86,42 @@ const StyledWrapper = styled.section`
           .label {
             color: #ccc;
             white-space: nowrap;
+
             &:after {
               content: '：';
             }
           }
+
           .txt {
             white-space: nowrap;
             font-weight: 800;
+
             &.loc {
               display: flex;
               flex-direction: column;
+
               .map {
                 margin-top: 0.12rem;
                 width: 2.4rem;
                 height: 2.4rem;
+
                 img {
                   width: 100%;
                   height: 100%;
                   border: 1px solid #ccc;
                   border-radius: 10px;
                 }
+
                 &:hover img {
                   box-shadow: 0px 1px 20px black;
                 }
               }
             }
           }
+
           @media screen and (max-width: 768px) {
             flex-direction: column;
+
             .label {
               margin-bottom: 0.12rem;
             }
@@ -111,7 +130,8 @@ const StyledWrapper = styled.section`
       }
     }
   }
-`
+`;
+
 export default function Wedding() {
 
   // Access the location from the LocationContext
