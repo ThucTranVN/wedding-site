@@ -59,7 +59,6 @@ const StyledWrapper = styled.section`
 
     .box {
       z-index: 99;
-      margin-top: 1.2rem;
       color: #000;
       padding: 0.5rem;
       background-color: #fff;
