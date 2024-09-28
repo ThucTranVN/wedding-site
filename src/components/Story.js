@@ -2,6 +2,8 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Title from './SectionTitle'
 import LoveStoryIcon from '../assets/imgs/love-story.png';
+import { AsyncImage } from 'loadable-image'
+import { Blur } from 'transitions-kit'
 
 const AniBeating = keyframes`
     from{
@@ -180,6 +182,14 @@ const StyledWrapper = styled.section`
       }
     }
   }
+
+  .preLoad
+  {
+    border-radius: 50%;
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 `;
 
 const prefix =
@@ -232,9 +242,14 @@ export default function Couple() {
         <ul className="items">
           {items.map(({ title, datetime, desc, picture }, idx) => (
             <li key={title} className="item">
-              <div className="pic">
-                <img src={picture} alt="picture" />
-              </div>
+                <AsyncImage
+                  style={{ width: 150, height: 150}}
+                  src={picture}
+                  loader={<div className='preLoad'/>}
+                  Transition={Blur}
+                  alt="picture" 
+                  className='pic'
+              />
               <img className="heart" src={LoveStoryIcon} alt="Love Story Icon" />
               <div
                 className="content"
