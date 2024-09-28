@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import LightGallery from 'lightgallery/react'
+import { AsyncImage } from 'loadable-image'
+import { Blur } from 'transitions-kit'
+import Title from './SectionTitle'
 import 'lightgallery/css/lightgallery.css'
 import 'lightgallery/css/lg-zoom.css'
 import 'lightgallery/css/lg-thumbnail.css'
 import 'lightgallery/css/lg-transitions.css'
-
-// import plugins if you need
 import lgZoom from 'lightgallery/plugins/zoom'
-import Title from './SectionTitle'
 
 const Loading = styled.div`
   font-size: 0.24rem;
@@ -99,6 +99,14 @@ const StyledWrapper = styled.section`
       }
     }
   }
+
+  .preLoad
+  {
+    border-radius: 5%;
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 `
 
 const weddings = Array.from(Array(36).keys())
@@ -166,11 +174,18 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
             data-sub-html={`<h4>${title[cate]}</h4>`}
             data-src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
           >
-              <img 
+            <AsyncImage
+                style={{ width: "100%", height: "auto", aspectRatio: 16 / 9 }}
+                src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
+                loader={<div className='preLoad'/>}
+                alt={photo}
+                Transition={Blur}
+              />
+              {/* <img 
                 loading="lazy"
                 src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
                 alt={photo}
-              />
+              /> */}
           </div>
         ))}
       </LightGallery>
