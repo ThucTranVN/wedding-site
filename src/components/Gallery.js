@@ -51,7 +51,7 @@ const StyledWrapper = styled.section`
           border: 3px solid #ccc;
           width: 100%;
           border: 5px;
-          border-radius: 5%;
+          border-radius: 14px;
         }
       }
     }
@@ -102,7 +102,7 @@ const StyledWrapper = styled.section`
 
   .preLoad
   {
-    border-radius: 5%;
+    border-radius: 14px;
     background: #3a6186;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -181,11 +181,6 @@ const GalleryInstance = ({ popupDan, cate = 'wedding', photos = [] }) => {
                 alt={photo}
                 Transition={Blur}
               />
-              {/* <img 
-                loading="lazy"
-                src={`https://alike-pine-brand.glitch.me/images/${photo}.jpg`}
-                alt={photo}
-              /> */}
           </div>
         ))}
       </LightGallery>
