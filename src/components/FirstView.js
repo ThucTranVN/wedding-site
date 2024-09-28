@@ -6,6 +6,8 @@ import FrameImage from '../assets/imgs/frame.png'
 import useTimer from '../useTimer'
 import LocationContext from './LocationContext'; // Import the LocationContext
 import { HiChevronDoubleDown } from 'react-icons/hi'
+import { AsyncImage } from 'loadable-image'
+import { Blur } from 'transitions-kit'
 
 const BGImg = 'https://alike-pine-brand.glitch.me/images/w2.jpg'
 
@@ -22,7 +24,6 @@ const AniDown = keyframes`
 
 
 const StyledWrapper = styled.section`
-  background-color: #fff;
 
   .inner_wrapper {
     display: flex;
@@ -33,12 +34,14 @@ const StyledWrapper = styled.section`
     max-width: 2200px;
     margin: auto;
     height: 100vh;
-
-    /* Background image settings for responsiveness */
-    background-image: url(${BGImg});
-    background-repeat: no-repeat;
-    background-size: cover; /* Image covers the entire section */
-    background-position-y: 50%;
+    .bg
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     @media screen and (max-width: 1024px) {
       background-size: contain; /* Contain image for smaller screens */
@@ -131,6 +134,7 @@ const StyledWrapper = styled.section`
 export default function FirstView() {
   const { value } = useTimer(); // useTimer now gets initTime based on location context
   const [size, setSize] = useState(null);
+  const [aspectRatio, setAspectRatio] = useState(16 / 9); // Initial aspect ratio for desktop
   const container = useRef(null);
   const el = useRef(null);
   const typed = useRef(null);
@@ -155,6 +159,17 @@ export default function FirstView() {
     const {date} = weddingDetails[location] || weddingDetails.sg;
 
   useEffect(() => {
+    const handleResize = () => {
+      const viewportWidth = window.innerWidth;
+
+      // Switch aspect ratio for mobile and desktop
+      if (viewportWidth <= 1024) {
+        setAspectRatio(9 / 16); // Mobile aspect ratio
+      } else {
+        setAspectRatio(16 / 9); // Desktop aspect ratio
+      }
+    }
+
     // Check if the container reference is attached before accessing getComputedStyle
     if (container.current) {
       setTimeout(() => {
@@ -162,6 +177,17 @@ export default function FirstView() {
         setSize({ width, height });
       }, 500);
     }
+
+        // Set initial size and aspect ratio
+        handleResize();
+
+        // Listen for window resize events
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+
   }, [container]); // Add container to the dependencies to make sure it's initialized
 
   useEffect(() => {
@@ -197,6 +223,14 @@ export default function FirstView() {
         />
       )}
       <div className="inner_wrapper">
+      <div className="bg">
+      <AsyncImage
+                style={{ width: "100%", height: "auto", aspectRatio}}
+                src={BGImg}
+                loader={<div className='preLoad'/>}
+                Transition={Blur}
+              />
+      </div>
         <div className="box">
           <div className="title">
             💕<span ref={el}></span>💕
