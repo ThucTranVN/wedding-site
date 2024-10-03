@@ -9,6 +9,7 @@ import GroomIcon from '../assets/imgs/groom.png';  // Custom groom icon
 
 const StyledWrapper = styled.section`
   width: 100%;
+  padding-top: 1rem;
   .cp {
     display: flex;
     align-items: center;

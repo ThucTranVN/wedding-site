@@ -29,14 +29,15 @@ const StyledWrapper = styled.section`
         display: none; 
     } 
     width: 100%;
-    padding: 0;
-    max-height: 100vh;
+    max-height: 200vh;  
     overflow: auto;
     will-change: transform;
+
     .lg-react-element {
-      column-count: 5;
+      margin: 12px; 
+      column-count: 4;
       @media screen and (max-width: 1500px) {
-        column-count: 4;
+        column-count: 3;
       }
       @media screen and (max-width: 768px) {
         column-count: 3;

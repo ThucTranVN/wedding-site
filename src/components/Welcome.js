@@ -1,20 +1,15 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import Confetti from 'confetti-react'
 import Title from './SectionTitle'
 import useTimer from '../useTimer'
 
 const StyledWrapper = styled.section`
   width: 100%;
-
   .wrapper {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30vh;
     .countdown {
-      margin-bottom: 10%;
       width: 100%;
       opacity: 0.8;
       padding: 0.3rem 0;
